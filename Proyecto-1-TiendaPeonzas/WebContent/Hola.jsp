@@ -10,7 +10,9 @@
 <<<<<<< HEAD
 	<h1>HOLAAAAA
 	
-	kokokokokokokoko</h1>
+	kokokokokokokoko
+	hola cambios hola cambios
+	</h1>
 =======
 	<h1>HOLAAAAA</h1>
 		<h1>ueeeeeeeeeeeeeeeeeeh</h1>

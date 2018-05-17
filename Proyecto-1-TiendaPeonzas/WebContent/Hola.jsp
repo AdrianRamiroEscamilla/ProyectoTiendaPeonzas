@@ -7,6 +7,16 @@
 <title>Insert title here</title>
 </head>
 <body>
+<<<<<<< HEAD
+	<h1>HOLAAAAA
+	
+	kokokokokokokoko
+	hola cambios hola cambios
+	</h1>
+=======
 	<h1>HOLAAAAA</h1>
+		<h1>ueeeeeeeeeeeeeeeeeeh</h1>
+	
+>>>>>>> e583eed8553023b1f820831ee442de26ddecace9
 </body>
 </html>

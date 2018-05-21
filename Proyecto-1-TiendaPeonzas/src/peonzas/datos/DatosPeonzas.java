@@ -9,7 +9,7 @@ import utilidades.Acceso;
 public class DatosPeonzas 
 {
 	Peonza peonza = new Peonza();
-	public Peonza seePeonza()
+	public void seePeonza()
 	{
 		
     	String query = "Select * from cuerdas";
@@ -41,6 +41,6 @@ public class DatosPeonzas
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-    	return peonza;
+    	
 	}
 }

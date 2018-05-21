@@ -113,20 +113,14 @@ public class Peonza {
 		this.imagen = imagen;
 	}
 
-	
 	@Override
 	public String toString() {
-		return "Datos de la peonza: " 
-				+ "\n\t1.Id: " + id
-				+ "\n\t2.Nombre: " + nombre 
-				+ "\n\t3.Descripción: " + descripcion
-				+ "\n\t4.Material " + material 
-				+ "\n\t5.Tamaño: " + tamanyo + " cm"
-				+ "\n\t5.Cantidad: " + cantidad + " unidades"
-				+ "\n\t6.Precio: " + precio + " € "
-				+ "\n\t7.Cuerda: " + cuerda 
-				+ "\n\t8.Punta: " + punta;
+		return "Peonza [nombre=" + nombre + ", id=" + id + ", material=" + material + ", cantidad=" + cantidad
+				+ ", descripcion=" + descripcion + ", precio=" + precio + ", cuerda=" + cuerda + ", punta=" + punta
+				+ ", imagen=" + imagen + ", tamanyo=" + tamanyo + "]";
 	}
+
+	
 
 
 	

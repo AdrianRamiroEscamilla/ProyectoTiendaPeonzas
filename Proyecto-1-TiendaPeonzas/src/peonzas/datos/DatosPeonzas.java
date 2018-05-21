@@ -25,7 +25,8 @@ public class DatosPeonzas
     
     		
 			try {
-				while (rs.next()){
+				while (rs.next())
+				{
 				peonza.setId(rs.getInt(1));
 				peonza.setNombre(rs.getString(2));
 				peonza.setTamanyo(rs.getDouble(3));
@@ -34,7 +35,7 @@ public class DatosPeonzas
 				peonza.setMaterial(rs.getString(6));
 				peonza.setCantidad(rs.getInt(7));
 				peonza.setDescripcion(rs.getString(10));
-					
+				System.out.println(peonza.toString());	
 				alPeonzas.add(peonza);
 				
 				}

@@ -8,27 +8,13 @@ public class Peonza {
 	private String material;
 	private int cantidad;
 	private String imagen;
-	public String getImagen() {
-		return imagen;
-	}
+	
 
-	public void setImagen(String imagen) {
-		this.imagen = imagen;
-	}
-
-	public String getDescripcion() {
-		return descripcion;
-	}
-
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
-	}
-
+	
 	private String descripcion;
 	private double precio;
 	private Cuerda cuerda;
 	private Punta punta;
-	private String imagen;
 	private double tamanyo;
 	
 	
@@ -135,6 +121,7 @@ public class Peonza {
 		this.imagen = imagen;
 	}
 
+	/*
 	@Override
 	public String toString() {
 <<<<<<< HEAD
@@ -153,7 +140,7 @@ public class Peonza {
 				+ ", descripcion=" + descripcion + ", precio=" + precio + ", cuerda=" + cuerda + ", punta=" + punta
 				+ ", imagen=" + imagen + ", tamanyo=" + tamanyo + "]";
 >>>>>>> 8ea036e525040332e5728b3d51c7e8567bf0405c
-	}
+	}*/
 
 	
 

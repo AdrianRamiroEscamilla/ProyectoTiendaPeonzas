@@ -14,7 +14,7 @@ public class PeonzasMetodos {
 	 * metodo para mostrar la lista de peonzas
 	 * @return
 	 */
-	public void muestraPeonzas(){
+	public void muestraPeonzas(ListaPeonzas){
 		
 		for(Peonza peonza:ListaPeonzas){
 			System.out.println(peonza.toString());

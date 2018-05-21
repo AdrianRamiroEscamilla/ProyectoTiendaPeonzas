@@ -1,6 +1,8 @@
 package peonzas.control;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,9 +20,12 @@ public class Control extends HttpServlet {
     protected void processHandler(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException
     {
     	System.out.println("Gola");
-    	String opcion = request.getParameter("pagina");
-    	new DatosPeonzas().seePeonza();
     	
+    	new DatosPeonzas().seePeonza();
+    	System.out.println("VAMOS! COño");
+    	RequestDispatcher view;
+    	view = request.getRequestDispatcher("Home.jsp");
+    	view.forward(request, response);
     }
     /**
      * @see HttpServlet#HttpServlet()

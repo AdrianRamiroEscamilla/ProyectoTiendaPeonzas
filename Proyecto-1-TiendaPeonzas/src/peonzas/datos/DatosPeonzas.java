@@ -17,14 +17,11 @@ public class DatosPeonzas
     	String usuario = "admin";
     	String password = "1111";
 		ResultSet rs = null;
-		try {
-			rs = Acceso.consultMySql(ruta, usuario , password, query);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		rs = Acceso.consultMySql(ruta, usuario , password, query);
+		System.out.println("Que tenemos en el rs");
     	
     	try {
+    		
 			while (rs.next()){
 			
 			System.out.println("Codigo "+rs.getInt(1));

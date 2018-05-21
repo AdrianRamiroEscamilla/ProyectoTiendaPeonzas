@@ -34,11 +34,11 @@ public class Cuerda {
 		this.longitud = longitud;
 	}
 
-	public double getgrosor() {
+	public double getGrosor() {
 		return grosor;
 	}
 
-	public void setgrosor(double grosor) {
+	public void setGrosor(double grosor) {
 		this.grosor = grosor;
 	}
 

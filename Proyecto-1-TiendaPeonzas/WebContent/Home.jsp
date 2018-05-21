@@ -52,11 +52,10 @@
       </dd>
     </dl>
     <dl class="curved">
-      <dt>CURVED CORNERS<span class="small"> by Stu Nicholls</span></dt>
+     <dt>Concurso de Peonza<span class="small"> by Con Los mas peques</span></dt>
       <dd>
-        <p>Ok, finally a four corner box with no extra markup.</p>
-        <p>No javascript and absolutely no hacks.</p>
-        <p class="last">Examples at <a href="http://www.cssplay.co.uk">&#0187; CSS Play</a></p>
+       <iframe width="100%" height="100%" src="https://www.youtube.com/embed/w1TExS-ZWyw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <p class="last">Mas cosas en:<a href="https://www.youtube.com/channel/UCfZbR6MabaoHpeKxy_HDNBw">&#0187; Con Los Peques</a></p>
       </dd>
     </dl>
     <dl class="curved">

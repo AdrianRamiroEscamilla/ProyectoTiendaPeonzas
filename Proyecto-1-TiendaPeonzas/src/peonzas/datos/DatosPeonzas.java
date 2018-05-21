@@ -13,7 +13,7 @@ public class DatosPeonzas
 	{
 		
     	String query = "Select * from cuerdas";
-    	String ruta = "jdbc:mysql://10.90.36.1/proyectoPeonzas";
+    	String ruta = "jdbc:mysql://10.90.36.16:3306/proyectopeonzas";
     	String usuario = "admin";
     	String password = "1111";
 		ResultSet rs = null;
@@ -27,13 +27,13 @@ public class DatosPeonzas
     	try {
 			while (rs.next()){
 			
-			System.out.println("Codigo "+rs.getInt(0));
+			System.out.println("Codigo "+rs.getInt(1));
 			
-			System.out.println("Nombre "+rs.getString(1));
+			System.out.println("Nombre "+rs.getString(2));
 			
-			System.out.println("Longitud "+rs.getString(2));
+			System.out.println("Longitud "+rs.getString(3));
 
-			System.out.println("Grosor "+rs.getString(3));
+			System.out.println("Grosor "+rs.getString(4));
 			
 			
 			}

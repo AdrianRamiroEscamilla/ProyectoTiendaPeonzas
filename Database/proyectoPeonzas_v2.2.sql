@@ -1,3 +1,4 @@
+DROP DATABASE `proyectoPeonzas`;
 -- Base de datos proyectoPeonzas
 CREATE DATABASE  IF NOT EXISTS `proyectoPeonzas` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_spanish_ci */;
 USE `proyectoPeonzas`;
@@ -5,8 +6,8 @@ USE `proyectoPeonzas`;
 -- table puntas
 CREATE TABLE  `puntas` (
   `idPunta` int(3) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
-  `tipo` varchar(50),
+  `nombre_punta` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `tipo_punta` varchar(50),
     PRIMARY KEY (`idPunta`)
 
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
@@ -15,7 +16,7 @@ CREATE TABLE  `puntas` (
 -- table cuerdas
 CREATE TABLE  `cuerdas` (
   `idCuerda` int(3) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `nombre_cuerda` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `longitud` decimal(5,2) ,
   `grosor` decimal(5,2)	,
   PRIMARY KEY (`idCuerda`)

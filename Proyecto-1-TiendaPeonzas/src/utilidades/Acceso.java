@@ -9,36 +9,44 @@ public class Acceso {
 	public static Statement aMysql(String driverUrl, String user, String password, String query){
     Connection con = null;
     Statement st = null;
-    ResultSet rs = null;
+    
 	
-    try {
-    	String driverClassName = "com.mysql.jdbc.Driver";
  
-    	Class.forName(driverClassName);
-    	con = DriverManager.getConnection(driverUrl,user,password);
+    	String driverClassName = "com.mysql.jdbc.Driver";
+    	System.out.println("vamos a crear el st");
+    	try {
+			Class.forName(driverClassName);
+			con = DriverManager.getConnection(driverUrl,user,password);
+	    	
+	    	st =  con.createStatement();
+	    	
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    
     	
     	
-    	st =  con.createStatement();
+  
 
-    	
-    	
-    } catch (Exception e) {
-    	e.toString();
-    }
 	return st;
 }
 	
 	
 
 
-public static ResultSet consultMySql(String driverUrl, String user, String password, String query) throws SQLException{
+public static ResultSet consultMySql(String driverUrl, String user, String password, String query){
 	
 	Statement st = null;
 	ResultSet rs = null;
 	try{
 	st = aMysql( driverUrl,  user,  password,  query);
-	
+	System.out.println("Tenemos el st con exito");
 	rs = st.executeQuery(query);
+	
 	}catch (SQLException e){
 		e.toString();
 	}catch (Exception e){

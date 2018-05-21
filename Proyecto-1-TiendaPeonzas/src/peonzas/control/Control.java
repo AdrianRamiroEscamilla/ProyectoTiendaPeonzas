@@ -22,7 +22,7 @@ public class Control extends HttpServlet {
     	System.out.println("Gola");
     	
     	new DatosPeonzas().seePeonza();
-    	System.out.println("VAMOS! COño");
+    	
     	RequestDispatcher view;
     	view = request.getRequestDispatcher("Home.jsp");
     	view.forward(request, response);

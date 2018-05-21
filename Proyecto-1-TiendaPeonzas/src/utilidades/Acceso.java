@@ -11,20 +11,27 @@ public class Acceso {
     Statement st = null;
     
 	
-    try {
+ 
     	String driverClassName = "com.mysql.jdbc.Driver";
     	System.out.println("vamos a crear el st");
-    	Class.forName(driverClassName);
-    	con = DriverManager.getConnection(driverUrl,user,password);
+    	try {
+			Class.forName(driverClassName);
+			con = DriverManager.getConnection(driverUrl,user,password);
+	    	
+	    	st =  con.createStatement();
+	    	
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    
     	
     	
-    	st =  con.createStatement();
+  
 
-    	
-    	
-    } catch (Exception e) {
-    	e.toString();
-    }
 	return st;
 }
 	

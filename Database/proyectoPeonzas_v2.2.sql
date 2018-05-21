@@ -6,8 +6,8 @@ USE `proyectoPeonzas`;
 -- table puntas
 CREATE TABLE  `puntas` (
   `idPunta` int(3) NOT NULL AUTO_INCREMENT,
-  `nombre_punta` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
-  `tipo_punta` varchar(50),
+  `nombrePunta` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `tipoPunta` varchar(50),
     PRIMARY KEY (`idPunta`)
 
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
@@ -16,7 +16,7 @@ CREATE TABLE  `puntas` (
 -- table cuerdas
 CREATE TABLE  `cuerdas` (
   `idCuerda` int(3) NOT NULL AUTO_INCREMENT,
-  `nombre_cuerda` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `nombreCuerda` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `longitud` decimal(5,2) ,
   `grosor` decimal(5,2)	,
   PRIMARY KEY (`idCuerda`)
@@ -50,6 +50,6 @@ ON DELETE CASCADE ON UPDATE CASCADE
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 
-INSERT INTO `proyectopeonzas`.`cuerdas` (`idCuerda`, `nombre`, `longitud`, `grosor`) VALUES ('1', 'Rígida', 9.5, '2');
-INSERT INTO `proyectopeonzas`.`cuerdas` (`idCuerda`, `nombre`, `longitud`, `grosor`) VALUES ('2', 'Trenzada', 15.0, '1.1');
-INSERT INTO `proyectopeonzas`.`cuerdas` (`idCuerda`, `nombre`, `longitud`, `grosor`) VALUES ('3', 'Elástica', 90.0, '1.2');
+INSERT INTO `proyectopeonzas`.`cuerdas` (`idCuerda`, `nombreCuerda`, `longitud`, `grosor`) VALUES ('1', 'Rígida', 9.5, '2');
+INSERT INTO `proyectopeonzas`.`cuerdas` (`idCuerda`, `nombreCuerda`, `longitud`, `grosor`) VALUES ('2', 'Trenzada', 15.0, '1.1');
+INSERT INTO `proyectopeonzas`.`cuerdas` (`idCuerda`, `nombreCuerda`, `longitud`, `grosor`) VALUES ('3', 'Elástica', 90.0, '1.2');

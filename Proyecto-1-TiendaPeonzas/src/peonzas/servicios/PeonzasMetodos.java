@@ -1,18 +1,15 @@
-package peonzas.modelo;
+package peonzas.servicios;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import peonzas.domain.Cuerda;
 import peonzas.domain.Peonza;
 import peonzas.domain.Punta;
 
-public class PeonzaMetodos {
+public class PeonzasMetodos {
 
-	List<Peonza>ListaPeonzas=new ArrayList<>();
-	List<Punta>ListaPuntas=new ArrayList<>();
-	List<Cuerda>ListaCuerdas=new ArrayList<>();
 	
+
 	/**
 	 * metodo para mostrar la lista de peonzas
 	 * @return

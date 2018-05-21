@@ -1,4 +1,6 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <title>Peonzas Shop</title>
@@ -38,7 +40,7 @@
       <dd> <br />
         <ul id="navlist">
           <li><a href="#">Material</a></li>
-          <li><a href="#">TamaÃ±o</a></li>
+          <li><a href="#">Tamaño</a></li>
           <li><a href="#">Precio</a></li>
           <li><a href="#">Punta</a></li>
           <li><a href="#">Cuerda</a></li>
@@ -58,7 +60,7 @@
     <dl class="curved">
       <dt>AUTORES</dt>
       <dd>
-        <p> Los diseÃ±adores de la pagina somos:</p>
+        <p> Los diseñadores de la pagina somos:</p>
         <p class="last">Adrian, Ruben, Francisco, David.</p>
       </dd>
     </dl>

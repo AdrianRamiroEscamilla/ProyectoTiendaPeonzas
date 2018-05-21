@@ -1,10 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
 <title>Peonzas Shop</title>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link href="https://fonts.googleapis.com/css?family=Titan+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -39,11 +41,11 @@
       <dt>PRODUCTOS POR CATEGORIAS</dt>
       <dd> <br />
         <ul id="navlist">
-          <li><a href="#">Material</a></li>
-          <li><a href="#">Tamaño</a></li>
-          <li><a href="#">Precio</a></li>
-          <li><a href="#">Punta</a></li>
-          <li><a href="#">Cuerda</a></li>
+          <li><a href="#"><strong>Material</strong></a></li>
+          <li><a href="#"><strong>Tamaño</strong></a></li>
+          <li><a href="#"><strong>Precio</strong></a></li>
+          <li><a href="#"><strong>Punta</strong></a></li>
+          <li><a href="#"><strong>Cuerda</strong></a></li>
           
         </ul>
         <p class="last">&nbsp;</p>

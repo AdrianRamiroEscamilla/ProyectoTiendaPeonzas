@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+   <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
@@ -29,6 +30,9 @@
     <h1>Bienvenidos a la tienda online <span style="font-weight:bold; color:#C4DA64;">Peonzas Shop</span></h1>
     <p class="big">Esta es la pagina de peonzas online mas famosa del mundo, un poco mas abajao tenemos nuestros productos.</p>
     <div id="box">
+    	<c:forEach var="peonza" items="${peonzas}" >
+				<li>Try: ${peonza.nombre}</li>
+			</c:forEach>
       <h2><img src="images/last.gif" alt="ad"> NOMBRE PRODUCTO</h2>
       <div>Imagen producto</div>
       <blockquote> Aqui va a ir una descripcion del producto </blockquote>

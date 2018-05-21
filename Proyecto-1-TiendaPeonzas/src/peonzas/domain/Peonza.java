@@ -10,6 +10,7 @@ public class Peonza {
 	private double precio;
 	private Cuerda cuerda;
 	private Punta punta;
+	private String imagen;
 	private double tamanyo;
 	
 	
@@ -64,13 +65,6 @@ public class Peonza {
 		this.cantidad = cantidad;
 	}
 
-	public String getDescripion() {
-		return descripcion;
-	}
-
-	public void setDescripion(String descripion) {
-		this.descripcion = descripion;
-	}
 
 	public double getPrecio() {
 		return precio;
@@ -103,7 +97,23 @@ public class Peonza {
 	public void setTamanyo(double tamanyo) {
 		this.tamanyo = tamanyo;
 	}
+	public String getDescripcion() {
+		return descripcion;
+	}
 
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	public String getImagen() {
+		return imagen;
+	}
+
+	public void setImagen(String imagen) {
+		this.imagen = imagen;
+	}
+
+	
 	@Override
 	public String toString() {
 		return "Datos de la peonza: " 
@@ -118,7 +128,7 @@ public class Peonza {
 				+ "\n\t8.Punta: " + punta;
 	}
 
-	
+
 	
 	
 }

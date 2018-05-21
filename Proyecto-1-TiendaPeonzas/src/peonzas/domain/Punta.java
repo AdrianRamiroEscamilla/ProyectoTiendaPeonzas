@@ -42,7 +42,10 @@ public class Punta {
 
 	@Override
 	public String toString() {
-		return "Punta [IdPunta=" + idPunta + ", Nombre=" + nombre + ", tipo=" + tipo + "]";
+		return "Características de la punta:"
+				+ "\n\t1.Id: " + idPunta 
+				+ "\n\t2.Nombre: " + nombre 
+				+ "\n\t3.Tipo=" + tipo;
 	}
 	
 	

@@ -17,13 +17,13 @@ public class PeonzaMetodos {
 	 * metodo para mostrar la lista de peonzas
 	 * @return
 	 */
-	public List<Peonza> muestraPeonzas(){
-		int i=0;
-
-		for(Peonza p:ListaPeonzas){
-			
+	public void muestraPeonzas(){
+		
+		for(Peonza peonza:ListaPeonzas){
+			System.out.println(peonza.toString());
 		}
-		return null;
+		
+		
 		
 	}
 	
@@ -41,9 +41,11 @@ public class PeonzaMetodos {
 	 * metodo para mostrar puntas
 	 * @return
 	 */
-	public List<Punta> muestraPuntas(){
-		return ListaPuntas;
+	public void muestraPuntas(){
 		
+		for(Punta punta:ListaPuntas){
+			System.out.println(punta.toString());
+		}
 		
 	}
 	
@@ -51,7 +53,11 @@ public class PeonzaMetodos {
 	 * metodo para mostrar cuerdas
 	 * @return
 	 */
-	public List<Cuerda> muestraCuerdas(){
-		return ListaCuerdas;
+	public void muestraCuerdas(){
+		
+		for(Cuerda cuerda:ListaCuerdas){
+			System.out.println(cuerda.toString());
+		}
+		
 	}
 }

@@ -18,6 +18,7 @@ public class PeonzasMetodos {
 	 * metodo para mostrar la lista de peonzas
 	 * @return
 	 */
+	
 	public void muestraPeonzas(){
 		
 		for(Peonza peonza:ListaPeonzas){
@@ -29,35 +30,33 @@ public class PeonzasMetodos {
 	 * metodo para buscar peonzas
 	 * @return
 	 */
-	public List<Peonza> buscaPeonzas(String material){
-		for(int i=0;i<ListaCuerdas.size();i++){
+	
+	public void buscaPeonzas(String material){
+		int i=0;
+		for(i=0;i<ListaCuerdas.size();i++){
 			if(ListaPeonzas.get(i).equals(material)){
 				System.out.println(ListaCuerdas.get(i));
 			}
 		}
-		return ListaPeonzas;
-		
 	}
 	
 	/**
 	 * metodo para mostrar puntas
 	 * @return
 	 */
+	
 	public void muestraPuntas(){
-		
-		
 		for(Punta punta:ListaPuntas){
 			System.out.println(punta.toString());
 		}
-		
 	}
 	
 	/**
 	 * metodo para mostrar cuerdas
 	 * @return
 	 */
+	
 	public void muestraCuerdas(){
-		
 		for(Cuerda cuerda:ListaCuerdas){
 			System.out.println(cuerda.toString());
 		}

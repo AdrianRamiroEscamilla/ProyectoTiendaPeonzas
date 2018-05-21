@@ -1,6 +1,7 @@
 package peonzas.control;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,9 +11,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import peonzas.datos.DatosPeonzas;
+<<<<<<< HEAD
 import peonzas.domain.*;
 import peonzas.modelo.Coleccion;
 import peonzas.servicios.PeonzasService;
+=======
+import peonzas.domain.Peonza;
+
+>>>>>>> 8ea036e525040332e5728b3d51c7e8567bf0405c
 /**
  * Servlet implementation class Control
  */
@@ -23,12 +29,21 @@ public class Control extends HttpServlet {
  
     
 	private static final long serialVersionUID = 1L;
+	private DatosPeonzas datosPeonzas = new DatosPeonzas();
+	private ArrayList<Peonza> alPeonzas;
     protected void processHandler(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException
     {
+<<<<<<< HEAD
     	System.out.println("Gola");
     	Pservice.InitProduct();
 
     	new DatosPeonzas().seePeonza();
+=======
+    	
+    	
+    	alPeonzas = datosPeonzas.seePeonza();
+    	request.setAttribute("peonzas", alPeonzas);
+>>>>>>> 8ea036e525040332e5728b3d51c7e8567bf0405c
     	RequestDispatcher view;
     	view = request.getRequestDispatcher("Home.jsp");
     	view.forward(request, response);

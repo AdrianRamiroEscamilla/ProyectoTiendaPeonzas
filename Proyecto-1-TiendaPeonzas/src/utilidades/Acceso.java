@@ -6,7 +6,7 @@ import javax.sql.*;
 
 public class Acceso {
 	
-	public static Statement aMysql(String driverUrl, String user, String password, String query){
+	public static Statement aMysql(String driverUrl, String user, String password){
     Connection con = null;
     Statement st = null;
     
@@ -43,7 +43,7 @@ public static ResultSet consultMySql(String driverUrl, String user, String passw
 	Statement st = null;
 	ResultSet rs = null;
 	try{
-	st = aMysql( driverUrl,  user,  password,  query);
+	st = aMysql( driverUrl,  user,  password);
 	System.out.println("Tenemos el st con exito");
 	rs = st.executeQuery(query);
 	
@@ -60,7 +60,7 @@ public static int modifMySql(String driverUrl, String user, String password, Str
 	Statement st = null;
 	int num = -3;
 	try{
-	st = aMysql( driverUrl,  user,  password,  query);
+	st = aMysql( driverUrl,  user,  password);
 	
 	num = st.executeUpdate(query);
 	}catch (SQLException e){

@@ -19,10 +19,10 @@ public class DatosPeonzas {
 		String password = "1111";
 
 		ResultSet rs = Acceso.consultMySql(ruta, usuario, password, query);
-		Peonza peonza;
+		Peonza peonza; //Lo asignamos fuera para que se pueda ver fuera del while 
 		try {
 			while (rs.next()) {
-				peonza= new Peonza();
+				peonza= new Peonza(); //Pero creamos el objeto dentro para que haga un objeto para cada linea 
 				peonza.setId(rs.getInt(1));
 				peonza.setNombre(rs.getString(2));
 				peonza.setTamanyo(rs.getDouble(3));

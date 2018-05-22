@@ -42,7 +42,7 @@ public class Control extends HttpServlet {
     	
     	
     	ArrayList<Peonza> alPeonzas = new DatosPeonzas().seePeonza();
-    	System.out.println("------- "+alPeonzas);
+    	
     	request.setAttribute("productos", alPeonzas);
 
     	RequestDispatcher view;

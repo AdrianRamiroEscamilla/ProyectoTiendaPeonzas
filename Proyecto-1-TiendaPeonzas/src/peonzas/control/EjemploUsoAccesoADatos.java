@@ -14,7 +14,7 @@ public class EjemploUsoAccesoADatos {
     	 * Para el func
     	 */
     	String query = "Select * from cuerdas";
-    	String ruta = "jdbc:mysql://10.90.36.16/proyectopeonzas";
+    	String ruta = "jdbc:mysql://10.90.36.16:3306/proyectopeonzas";
     	String usuario = "admin";
     	String password = "1111";
 		ResultSet rs =    Acceso.consultMySql(ruta, usuario , password, query);

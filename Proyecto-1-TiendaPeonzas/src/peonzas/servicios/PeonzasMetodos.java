@@ -27,11 +27,11 @@ public class PeonzasMetodos {
 	}
 	
 	/**
-	 * metodo para buscar peonzas
+	 * metodo para mostrar peonzas por material
 	 * @return
 	 */
 	
-	public void buscaPeonzas(String material){
+	public void muestraPeonzasMaterial(String material){
 		int i=0;
 		for(i=0;i<ListaCuerdas.size();i++){
 			if(ListaPeonzas.get(i).equals(material)){
@@ -62,4 +62,20 @@ public class PeonzasMetodos {
 		}
 		
 	}
+	
+
+	  
+	 /**metodo para mostrar peonzas por tamaño
+	  * 
+	  * @param material
+	  */
+	  public void muestraPeonzasTamanyo(String tamanyo){
+		int i=0;
+		for(i=0;i<ListaCuerdas.size();i++){
+			if(ListaPeonzas.get(i).equals(tamanyo)){
+				System.out.println(ListaCuerdas.get(i));
+			}
+		}
+	}
+	 
 }

@@ -42,7 +42,8 @@ public class Control extends HttpServlet {
     	
     	
     	ArrayList<Peonza> alPeonzas = new DatosPeonzas().seePeonza();
-    	request.setAttribute("peonzas", alPeonzas);
+    	System.out.println("------- "+alPeonzas);
+    	request.setAttribute("productos", alPeonzas);
 
     	RequestDispatcher view;
     	view = request.getRequestDispatcher("Home.jsp");

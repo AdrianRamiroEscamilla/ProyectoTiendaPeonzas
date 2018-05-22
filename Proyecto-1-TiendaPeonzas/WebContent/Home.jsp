@@ -29,15 +29,14 @@
   <div id="content">
     <h1>Bienvenidos a la tienda online <span style="font-weight:bold; color:#C4DA64;">Peonzas Shop</span></h1>
     <p class="big">Esta es la pagina de peonzas online mas famosa del mundo, un poco mas abajao tenemos nuestros productos.</p>
-    <div id="box">
-    	<c:forEach var="peonza" items="${peonzas}" >
-				<li>Try: ${peonza.nombre}</li>
-			</c:forEach>
-      <h2><img src="images/last.gif" alt="ad"> NOMBRE PRODUCTO</h2>
-      <div>Imagen producto</div>
-      <blockquote> Aqui va a ir una descripcion del producto </blockquote>
+    <c:forEach var="peonza" items="${productos}" >
+    <div id="box">				
+      <h2><img src="images/last.gif" alt="ad">${peonza.nombre}</h2>
+      <div id="imgProducto"><img src="${peonza.imagen}"alt="${peonza.nombre}"></div>
+      <blockquote> ${peonza.descripcion} </blockquote>
       <p>En este parrafo puede ir la opcion de compra para este producto</p>
     </div>
+    </c:forEach>
     <p></p>
   </div>
   <div id="content_right">

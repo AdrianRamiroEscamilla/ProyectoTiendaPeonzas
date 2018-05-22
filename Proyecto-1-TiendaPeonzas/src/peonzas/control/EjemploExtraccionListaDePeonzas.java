@@ -24,7 +24,6 @@ public class EjemploExtraccionListaDePeonzas {
 	      System.out.print("Original contents of al: ");
 	      for (int i=0; i<list.size();i++ ){
 			   Peonza peonza = (Peonza) list.get(i);
-			   System.out.print("código "+peonza.getId());
 			   System.out.println("   nombre" +peonza.getNombre());
 
 	      }

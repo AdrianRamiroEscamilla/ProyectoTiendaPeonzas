@@ -2,6 +2,9 @@ package peonzas.datos;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+
+import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
 
 import peonzas.domain.Cuerda;
 import peonzas.domain.Peonza;
@@ -13,7 +16,7 @@ public class Datos {
 	Coleccion coleccion = new Coleccion();
 	
 	
-	public Coleccion atack(){
+	public ArrayList atack(){
 	  	String query = "Select * from peonzas";
     	String ruta = "jdbc:mysql://10.90.36.16/proyectopeonzas";
     	String usuario = "admin";
@@ -52,10 +55,10 @@ public class Datos {
 				e.printStackTrace();
 			}
     	
-    	
+    	ArrayList al = (ArrayList) coleccion.getListaPeonzas();
 
     	
-    	return coleccion;
+    	return   al;
     	
     	
     	

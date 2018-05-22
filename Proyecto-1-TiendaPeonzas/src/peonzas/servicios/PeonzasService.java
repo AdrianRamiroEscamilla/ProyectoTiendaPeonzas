@@ -26,8 +26,8 @@ public class PeonzasService {
 	 * InitProduct carga los datos iniciales de los productos.
 	 * @return
 	 */
-	public Coleccion InitProduct(){
-		return datos.atack();
+	public ArrayList InitProduct(){
+		return  datos.atack();
 	}
 	
 	/**

@@ -1,5 +1,9 @@
 package peonzas.control;
 
+import java.util.ArrayList;
+
+import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
+
 import peonzas.domain.Peonza;
 import peonzas.modelo.Coleccion;
 import peonzas.servicios.PeonzasService;
@@ -13,9 +17,9 @@ public class EjemploExtraccionListaDePeonzas {
 		 * solo hay que copiarlo y pegarlo para podder utilizarlo.
 		 */
 	    PeonzasService pservice = new PeonzasService();
-
-		Coleccion  coleccion = new Coleccion();
-		Coleccion  list =  pservice.InitProduct();
+	      ArrayList list = new ArrayList();
+	      list =  pservice.InitProduct();
+	      
 	      // Use iterator to display contents of al
 	      System.out.print("Original contents of al: ");
 	      for (int i=0; i<list.size();i++ ){

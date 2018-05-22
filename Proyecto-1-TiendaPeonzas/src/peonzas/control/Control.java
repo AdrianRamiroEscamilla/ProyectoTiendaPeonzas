@@ -38,7 +38,7 @@ public class Control extends HttpServlet {
   
 
     	
-
+    	System.out.println("HOla");
     	
     	
     	ArrayList<Peonza> alPeonzas = new DatosPeonzas().seePeonza();

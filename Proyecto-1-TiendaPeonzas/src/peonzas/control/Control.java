@@ -29,19 +29,19 @@ public class Control extends HttpServlet {
  
     
 	private static final long serialVersionUID = 1L;
-	private DatosPeonzas datosPeonzas = new DatosPeonzas();
-	private ArrayList<Peonza> alPeonzas;
+
+	
     protected void processHandler(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException
     {
 
     	System.out.println("Gola");
   
 
-    	new DatosPeonzas().seePeonza();
+    	
 
     	
     	
-    	alPeonzas = datosPeonzas.seePeonza();
+    	ArrayList<Peonza> alPeonzas = new DatosPeonzas().seePeonza();
     	request.setAttribute("peonzas", alPeonzas);
 
     	RequestDispatcher view;

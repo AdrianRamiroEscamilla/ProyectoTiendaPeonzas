@@ -6,6 +6,7 @@
 <head>
 <title>Peonzas Shop</title>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Gloria+Hallelujah|Luckiest+Guy" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Titan+One" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
 <link href="style.css" rel="stylesheet" type="text/css">
@@ -27,14 +28,14 @@
 </div>
 <div id="container">
   <div id="content">
-    <h1>Bienvenidos a la tienda online <span style="font-weight:bold; color:#C4DA64;">Peonzas Shop</span></h1>
+    <h1>Bienvenidos a la tienda online <span style="font-weight:bold; color:#02c0ff;">Peonzas Shop</span></h1>
     <p class="big">Esta es la pagina de peonzas online mas famosa del mundo, un poco mas abajao tenemos nuestros productos.</p>
     <c:forEach var="peonza" items="${productos}" >
     <div id="box">				
       <h2><img src="images/last.gif" alt="ad">${peonza.nombre}</h2>
       <div id="imgProducto"><img src="${peonza.imagen}"alt="${peonza.nombre}"></div>
       <blockquote> ${peonza.descripcion} </blockquote>
-      <p>Precio : ${peonza.precio} $  </p>
+      <p id="precio">Precio : ${peonza.precio} $  </p>
     </div>
     </c:forEach>
     <p></p>

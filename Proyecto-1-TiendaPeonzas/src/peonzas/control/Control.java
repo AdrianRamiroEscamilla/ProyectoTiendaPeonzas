@@ -33,17 +33,19 @@ public class Control extends HttpServlet {
 	
     protected void processHandler(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException
     {
-
-
     	
-    	
+    	String opcion = request.getParameter("opcion");
+    	System.out.println("-------"+opcion);
     	ArrayList<Peonza> alPeonzas = new DatosPeonzas().seePeonza();
-    	
-    	request.setAttribute("productos", alPeonzas);
 
-    	RequestDispatcher view;
-    	view = request.getRequestDispatcher("Home.jsp");
-    	view.forward(request, response);
+	    	request.setAttribute("productos", alPeonzas);
+
+	    	RequestDispatcher view;
+	    	view = request.getRequestDispatcher("Home.jsp");
+	    	view.forward(request, response);
+    	
+    	
+    	
     }
     /**
      * @see HttpServlet#HttpServlet()

@@ -27,7 +27,7 @@
 	</div>
 	<div id="menu">
 		<ul id="nav">
-			<li id="home" class="activelink"><a href="Control">Home</a></li>
+			<li id="home" class="activelink"><a href="Control?opcion=Home">HomeHome</a></li>
 			<li id="who"><a href="#">About</a></li>
 			<li id="prod"><a href="#">Product</a></li>
 			<li id="serv"><a href="#">Services</a></li>

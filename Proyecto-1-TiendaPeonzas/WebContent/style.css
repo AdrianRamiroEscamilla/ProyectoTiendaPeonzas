@@ -144,7 +144,7 @@ ul#nav li.activelink a, ul#nav li.activelink a:hover {
 @media only screen and (max-width: 900px) {
     /* For mobile phones: */
    #box {
-	width: 43%;
+	width: 43 %;
    }
 }
 

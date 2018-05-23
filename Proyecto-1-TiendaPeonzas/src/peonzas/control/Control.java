@@ -48,7 +48,7 @@ public class Control extends HttpServlet {
     	    	view.forward(request, response);
     	    	
     			break;
-    		case "catMaterial":
+    		case "":
     			break;
     	}
     	

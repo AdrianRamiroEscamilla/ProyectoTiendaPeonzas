@@ -65,6 +65,14 @@ public class DatosPeonzas {
 		if (categoria.equals("material")){
 			tipo = "='"+tipo+"'";
 		}
+		else if(categoria.equals("punta"))
+		{
+			tipo = "='"+tipo+"'";
+		}
+		if(categoria.equals("cuerda"))
+		{
+			tipo = "='"+tipo+"'";
+		}
 	
 		String query = "Select * from peonzas WHERE "+categoria+tipo;
 		String ruta = "jdbc:mysql://10.90.36.16/proyectopeonzas";

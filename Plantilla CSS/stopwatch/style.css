@@ -4,7 +4,7 @@ margin:0;
 padding:0;
 }
 body {
-font-family: 'Handlee','Titan One';
+font-family: 'Gloria Hallelujah','Handlee','Titan One';
 line-height:1.8em;
 background: #fff url(images/patronfondo.jpg) repeat;
 color: #666;
@@ -13,7 +13,7 @@ color: #666;
 #banner {
 width:100%;
 height:150px;
-background:#bbd9ee url(images/banner.png) center no-repeat;
+background:#7f0033 url(images/banner.png) center no-repeat;
 }
 
 #banner h1 {
@@ -21,8 +21,9 @@ margin: 0 0 0 250px;
 line-height:1.8em;
 letter-spacing: 3px;
 font-size: 5em;
-color: #68000a;
-text-shadow: 2px 2px #0099c4;
+color: #ffffff;
+text-shadow: 4px 4px #0099c4;
+    font-family: 'Pacifico';
 }
 #banner p {
 float:right;

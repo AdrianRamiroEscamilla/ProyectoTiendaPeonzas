@@ -95,7 +95,8 @@ color: #06a;
 }
 			/*CONTENT_LEFT*/
 #content {
-width: 70%;
+
+    width: 70%;
     float: left;
     margin: 50px 50px 50px 50px;
     padding: 0 0 30px 10px;

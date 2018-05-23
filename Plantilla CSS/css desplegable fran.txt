@@ -1,8 +1,9 @@
 #desplegable
-
+{
     background: transparent;
     border: none;
     width: 140px;
     overflow: hidden;
     padding: 5px;
     font-weight: bold;
+}

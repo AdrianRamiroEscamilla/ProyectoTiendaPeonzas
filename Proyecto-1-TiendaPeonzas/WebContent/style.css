@@ -139,14 +139,20 @@ ul#nav li.activelink a, ul#nav li.activelink a:hover {
 			
 			
 
+<<<<<<< HEAD
 /*CONTENT_RIGHT*/
+=======
+
+
+>>>>>>> master
 
 #content_right {
-	width: 200px;
-	float: right;
-	margin: 50px 10px 0 0;
-	padding-bottom: 30px;
-	border-radius: 50px;
+    width: 15%;
+    float: right;
+    margin: 50px 10px 0 0;
+    padding-bottom: 30px;
+    border-radius: 50px;
+    margin-right: 5%;
 }
 /*FOOTER*/
 #footer {
@@ -162,7 +168,18 @@ blockquote {
     font-style: italic;
     color: #001bda;
 }
-
+.desplegable
+{
+    background: transparent;
+    border: none;
+    width: 100%;
+    overflow: hidden;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 100%;
+    font-family: 'Gloria Hallelujah';
+    color: #ff9933
+}
 .small {
 	color: #ff9933;
 	font-size: 0.8em;

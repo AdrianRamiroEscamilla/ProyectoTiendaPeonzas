@@ -34,10 +34,7 @@ public class Control extends HttpServlet {
     protected void processHandler(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException
     {
 
-<<<<<<< HEAD
-=======
 
->>>>>>> master
     	
     	
     	ArrayList<Peonza> alPeonzas = new DatosPeonzas().seePeonza();

@@ -43,7 +43,7 @@ public class Categorias extends HttpServlet {
     	request.setAttribute("catPeonzas", catPeonzas);
 
     	RequestDispatcher view;
-    	view = request.getRequestDispatcher("categoria.jsp");
+    	view = request.getRequestDispatcher("peonzasCategorias.jsp");
     	view.forward(request, response);
     }
     

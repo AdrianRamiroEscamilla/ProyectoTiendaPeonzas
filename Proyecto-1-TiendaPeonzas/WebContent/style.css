@@ -136,11 +136,12 @@ ul#nav li.activelink a, ul#nav li.activelink a:hover {
 }
 /*CONTENT_RIGHT*/
 #content_right {
-	width: 200px;
-	float: right;
-	margin: 50px 10px 0 0;
-	padding-bottom: 30px;
-	border-radius: 50px;
+    width: 15%;
+    float: right;
+    margin: 50px 10px 0 0;
+    padding-bottom: 30px;
+    border-radius: 50px;
+    margin-right: 5%;
 }
 /*FOOTER*/
 #footer {

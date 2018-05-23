@@ -34,11 +34,6 @@ public class Control extends HttpServlet {
     protected void processHandler(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException
     {
 
-    	System.out.println("Gola");
-  
-
-    	
-    	System.out.println("HOla");
     	
     	
     	ArrayList<Peonza> alPeonzas = new DatosPeonzas().seePeonza();

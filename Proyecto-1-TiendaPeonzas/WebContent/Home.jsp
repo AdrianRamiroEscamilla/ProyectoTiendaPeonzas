@@ -70,36 +70,46 @@
 				<dd>
 					<br />
 					<ul id="navlist">
-						<li><select name="desplegable" class="desplegable">
+						<form method="post" action="Categorias">
+						<li><select name="desplegable" class="desplegable" >
 								<option value="-MATERIAL" selected="selected">-MATERIAL</option>
-								<option value="Madera">Madera</option>
+								<option value="Madera" >Madera</option>
 								<option value="Metal">Metal</option>
 								<option value="Plástico">Plástico</option>
-						</select></li>
+								<input type="submit" value="Enviar">
+						</select></li></form>
+						<form method="post" action="Categorias">
 						<li><select name="desplegable2" class="desplegable">
 								<option value="-TAMAÑO" selected="selected">-TAMAÑO</option>
-								<option value="Grande">Grande</option>
-								<option value="Mediana">Mediana</option>
-								<option value="Pequeña">Pequeña</option>
-						</select></li>
+								<option value="Grande"><a href="Categorias" >Grande</a></option>
+								<option value="Mediana"><a href="Categorias" >Mediana</a></option>
+								<option value="Pequeña"><a href="Categorias" >Pequeña</a></option>
+								<input type="submit" value="Enviar">
+						</select></li></form>
+						<form method="post" action="Categorias">
 						<li><select name="desplegable3" class="desplegable">
 								<option value="-PRECIO" selected="selected">-PRECIO</option>
 								<option value="5-10 €">5-10 €</option>
 								<option value="10-15 €">10-15 €</option>
 								<option value="15-20 €">15-20 €</option>
-						</select></li>
+								<input type="submit" value="Enviar">
+						</select></li></form>
+						<form method="post" action="Categorias">
 						<li><select name="desplegable4" class="desplegable">
 								<option value="-PUNTA" selected="selected">-PUNTA</option>
 								<option value="Afilada">Afilada</option>
 								<option value="Redonda">Redonda</option>
 								<option value="Plana">Plana</option>
-						</select></li>
+								<input type="submit" value="Enviar">
+						</select></li></form>
+						<form method="post" action="Categorias">
 						<li><select name="desplegable5" class="desplegable">
 								<option value="-CUERDA" selected="selected">-CUERDA</option>
 								<option value="Rígida">Rígida</option>
 								<option value="Trenzada">Trenzada</option>
 								<option value="Elástica">Elástica</option>
-						</select></li>
+								<input type="submit" value="Enviar">
+						</select></li></form>
 
 					</ul>
 					<p class="last">&nbsp;</p>

@@ -34,7 +34,7 @@
       <h2><img src="images/last.gif" alt="ad">${peonza.nombre}</h2>
       <div id="imgProducto"><img src="${peonza.imagen}"alt="${peonza.nombre}"></div>
       <blockquote> ${peonza.descripcion} </blockquote>
-      <p>En este parrafo puede ir la opcion de compra para este producto</p>
+      <p>Precio : ${peonza.precio} $  </p>
     </div>
     </c:forEach>
     <p></p>

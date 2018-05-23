@@ -91,14 +91,14 @@ public class PeonzasService {
 	
 
 	  
-	 /**metodo para mostrar peonzas por tamaño
+	 /**metodo para mostrar peonzas por tamaï¿½o
 	  * 
 	  * @param material
 	  */
 	  public void muestraPeonzasTamanyo(String tamanyo){
 		int i=0;
 		for(i=0;i<ListaCuerdas.size();i++){
-			if(ListaPeonzas.get(i).equals(tamanyo)){
+			if(listaPeonzas.get(i).equals(tamanyo)){
 				System.out.println(ListaCuerdas.get(i));
 			}
 		}

@@ -134,7 +134,13 @@ ul#nav li.activelink a, ul#nav li.activelink a:hover {
 	border: 1px solid black;
 	border-radius: 2pc;
 }
+<<<<<<< HEAD
+			/*CONTENT_RIGHT*/
+			
+			
+=======
 /*CONTENT_RIGHT*/
+>>>>>>> b503bbf380e414076edb7968c375168ec0978bf1
 #content_right {
     width: 15%;
     float: right;

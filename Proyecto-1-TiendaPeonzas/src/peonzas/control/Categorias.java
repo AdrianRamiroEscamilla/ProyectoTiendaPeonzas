@@ -34,14 +34,14 @@ public class Categorias extends HttpServlet {
     {
 
 
-    	ArrayList<Peonza> alPeonzas = new DatosPeonzas().seePeonza();
     	
     	String categoria = (String) request.getAttribute("categoria");
-    	request.setAttribute("categoria", categoria);
     	String parametro = (String) request.getAttribute("parametro");
     	request.setAttribute("parametro", parametro);
-
     	
+    	ArrayList<Peonza> catPeonzas = new DatosPeonzas().buscaCategoria(categoria, parametro);
+    	request.setAttribute("catPeonzas", catPeonzas);
+
     	RequestDispatcher view;
     	view = request.getRequestDispatcher("categoria.jsp");
     	view.forward(request, response);

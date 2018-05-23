@@ -198,7 +198,7 @@ blockquote {
 }
 /*CURVED CORNERS*/
 dl.curved {
-	background: #bbd9ee url(images/c_tl.gif) top left no-repeat;
+	background: #0066aa url(images/c_tl.gif) top left no-repeat;
 	margin: 15px 0;
 	padding: 0;
 	width: 100%;

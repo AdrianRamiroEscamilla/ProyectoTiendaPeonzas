@@ -139,7 +139,12 @@ ul#nav li.activelink a, ul#nav li.activelink a:hover {
 			
 			
 
+<<<<<<< HEAD
 /*CONTENT_RIGHT*/
+=======
+
+
+>>>>>>> master
 
 #content_right {
     width: 15%;
@@ -163,7 +168,18 @@ blockquote {
     font-style: italic;
     color: #001bda;
 }
-
+.desplegable
+{
+    background: transparent;
+    border: none;
+    width: 100%;
+    overflow: hidden;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 100%;
+    font-family: 'Gloria Hallelujah';
+    color: #ff9933
+}
 .small {
 	color: #ff9933;
 	font-size: 0.8em;
@@ -186,7 +202,7 @@ blockquote {
 }
 /*CURVED CORNERS*/
 dl.curved {
-	background: #bbd9ee url(images/c_tl.gif) top left no-repeat;
+	background: #0066aa url(images/c_tl.gif) top left no-repeat;
 	margin: 15px 0;
 	padding: 0;
 	width: 100%;

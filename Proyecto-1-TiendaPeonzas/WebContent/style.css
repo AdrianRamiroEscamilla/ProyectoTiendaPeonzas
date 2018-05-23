@@ -95,7 +95,10 @@ ul#nav li.activelink a, ul#nav li.activelink a:hover {
 	margin-right: 2%;
 	margin-bottom: 2%;
 	float: left;
-	height: 500px;
+	/*height: 500px;*/
+}
+.clearbox{
+	clear:both;
 }
 
 #box h2 {
@@ -122,25 +125,44 @@ ul#nav li.activelink a, ul#nav li.activelink a:hover {
 
 #imgProducto {
     width: 85%;
-    height: 50%;
+    /*height: 50%;*/
     display: block;
     margin-left: 5%;
 	
 }
 
 #imgProducto img {
-	width:100%;
-	height: 100%;
+	/*width:100%;*/
+	max-width:100%;
+	/*height: 100%;*/
 	border: 1px solid black;
 	border-radius: 2pc;
 }
+
+/*ASR */
+
+@media only screen and (max-width: 900px) {
+    /* For mobile phones: */
+   #box {
+	width: 43%;
+   }
+}
+
+@media only screen and (max-width: 600px) {
+    /* For mobile phones: */
+   #box {
+	width: 95%;
+   }
+}
+
+
+/* ----------------------------------------- */
 
 			/*CONTENT_RIGHT*/
 			
 			
 
-
-
+	
 
 #content_right {
     width: 15%;

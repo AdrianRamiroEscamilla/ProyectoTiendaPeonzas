@@ -9,14 +9,14 @@ import peonzas.domain.Peonza;
 import peonzas.domain.Punta;
 import peonzas.modelo.Coleccion;
 
-public class PeonzasService {
+public class PeonzasService implements IPeonzasService{
 
 	/*Aquí igual, los otros arraylist están de más.
 	 * además que yo creo que habría que trabajar con la capa Colección
 	 * en lugar de directamente con los arraylist.
 	 */
 	
-	List <Peonza> listaPeonzas= new ArrayList<>();
+	List <Peonza> ListaPeonzas= new ArrayList<>();
 	List <Cuerda> ListaCuerdas= new ArrayList<>();
 	List <Punta> ListaPuntas= new ArrayList<>();
 	Datos datos = new Datos();
@@ -35,7 +35,7 @@ public class PeonzasService {
 	 * @return
 	 */
 	public void add(Peonza peonza){
-		listaPeonzas.add(peonza);
+		ListaPeonzas.add(peonza);
 	}
 	/**
 	 * método para el tamaño de la coleccion
@@ -43,11 +43,11 @@ public class PeonzasService {
 	 * @return
 	 */
 	public int size(Peonza peonza){
-		return listaPeonzas.size();
+		return ListaPeonzas.size();
 	}
 	public void muestraPeonzas(){
 		
-		for(Peonza peonza:listaPeonzas){
+		for(Peonza peonza:ListaPeonzas){
 			System.out.println(peonza.toString());
 		}
 	}
@@ -60,7 +60,7 @@ public class PeonzasService {
 	public void muestraPeonzasMaterial(String material){
 		int i=0;
 		for(i=0;i<ListaCuerdas.size();i++){
-			if(listaPeonzas.get(i).equals(material)){
+			if(ListaPeonzas.get(i).equals(material)){
 				System.out.println(ListaCuerdas.get(i));
 			}
 		}
@@ -91,17 +91,19 @@ public class PeonzasService {
 	
 
 	  
-	 /**metodo para mostrar peonzas por tama�o
+	 /**metodo para mostrar peonzas por tama�o
 	  * 
 	  * @param material
 	  */
 	  public void muestraPeonzasTamanyo(String tamanyo){
 		int i=0;
 		for(i=0;i<ListaCuerdas.size();i++){
-			if(ListaPeonzas.get(i).equals(tamanyo)){
+			if(listaPeonzas.get(i).equals(tamanyo)){
 				System.out.println(ListaCuerdas.get(i));
 			}
 		}
 	}
+
+	
 	 
 }

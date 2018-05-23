@@ -45,9 +45,7 @@
 			
 			
 			<c:forEach var="peonza" items="${catPeonzas}" varStatus="loopCount">
-				<c:if test="${loopCount.index mod '3' eq 0}">
-					<div class="clearbox">
-				</c:if>
+				
 				<div id="box">
 					<h2>
 						<img src="images/last.gif" alt="ad">${peonza.nombre}</h2>
@@ -57,13 +55,13 @@
 					<blockquote>${peonza.descripcion}</blockquote>
 					<p id="precio">Precio : ${peonza.precio} $</p>
 				</div>
-				<c:if test="${loopCount.count mod '3' eq 0}">
 				
-					</div>
-				</c:if>
+			
 			</c:forEach>
 			<p></p>
+			
 		</div>
+		
 		<div id="content_right">
 			<dl class="curved">
 				<dt>PRODUCTOS POR CATEGORIAS</dt>
@@ -83,7 +81,7 @@
 						<li><select name="opcion" class="desplegable">
 								<option value="-TAMAÑO" selected="selected">-TAMAÑO</option>
 								<option value=">10.0"><a href="Categorias" >Grande</a></option>
-								<option value="between 9.0 and 10.0"><a href="Categorias" >Mediana</a></option>
+								<option value=">9 and tamanyo <10"><a href="Categorias" >Mediana</a></option>
 								<option value="<9"><a href="Categorias" >Pequeña</a></option>
 								<input type="hidden" name="categoria" value="tamanyo" />
 								<input type="submit" value="Enviar">
@@ -91,9 +89,9 @@
 						<form method="post" action="Categorias">
 						<li><select name="opcion" class="desplegable">
 								<option value="-PRECIO" selected="selected">-PRECIO</option>
-								<option value="between 5.0 and 10.0">5-10 €</option>
-								<option value="between 10.0 and 15.0">10-15 €</option>
-								<option value="between 15.0 and 20.0">15-20 €</option>
+								<option value="> 10 and precio <15">10-15 €</option>
+								<option value="> 15 and precio < 20">15-20 €</option>
+								<option value=">20">>20 €</option>
 								<input type="hidden" name="categoria" value="precio" />
 								<input type="submit" value="Enviar">
 						</select></li></form>
@@ -141,7 +139,8 @@
 					<p class="last">Adrian, Ruben, Francisco, David.</p>
 				</dd>
 			</dl>
-		</div>
+		
+		
 	</div>
 	<div id="footer">
 		<p>

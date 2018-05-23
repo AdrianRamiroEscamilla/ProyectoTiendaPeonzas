@@ -1,0 +1,58 @@
+<div id="content_right">
+    <dl class="curved">
+      <dt>PRODUCTOS POR CATEGORIAS</dt>
+      <dd> <br>
+        <ul id="navlist">
+          <li><select name="desplegable" id="desplegable">   
+    <option value="-MATERIAL" selected="selected">-MATERIAL</option>
+       <option value="Madera">Madera</option>
+       <option value="Metal">Metal</option>
+       <option value="Plástico">Plástico</option>
+   </select></li>
+          <li>
+
+<select name="desplegable2" id="desplegable">   
+    <option value="-TAMAÑO" selected="selected">-TAMAÑO</option>
+       <option value="Grande">Grande</option>
+       <option value="Mediana">Mediana</option>
+       <option value="Pequeña">Pequeña</option>
+   </select>
+</li>
+          <li><select name="desplegable3" id="desplegable">   
+    <option value="-PRECIO" selected="selected">-PRECIO</option>
+       <option value="5-10 €">5-10 €</option>
+       <option value="10-15 €">10-15 €</option>
+       <option value="15-20 €">15-20 €</option>
+   </select></li>
+          <li><select name="desplegable4" id="desplegable">   
+    <option value="-PUNTA" selected="selected">-PUNTA</option>
+       <option value="Afilada">Afilada</option>
+       <option value="Redonda">Redonda</option>
+       <option value="Plana">Plana</option>
+   </select></li>
+          <li><select name="desplegable5" id="desplegable">   
+    <option value="-CUERDA" selected="selected">-CUERDA</option>
+       <option value="Rígida">Rígida</option>
+       <option value="Trenzada">Trenzada</option>
+       <option value="Elástica">Elástica</option>
+   </select></li>
+          
+        </ul>
+        <p class="last">&nbsp;</p>
+      </dd>
+    </dl>
+    <dl class="curved">
+      <dt>Concurso de Peonza<span class="small"> by Con Los mas peques</span></dt>
+      <dd>
+       <div class="ytp-cued-thumbnail-overlay-image" style="background-image: url(&quot;https://i.ytimg.com/vi/w1TExS-ZWyw/hqdefault.jpg&quot;);"></div>
+        <p class="last">Mas cosas en:<a href="https://www.youtube.com/channel/UCfZbR6MabaoHpeKxy_HDNBw">» Con Los Peques</a></p>
+      </dd>
+    </dl>
+    <dl class="curved">
+      <dt>AUTORES</dt>
+      <dd>
+        <p> Los diseñadores de la pagina somos:</p>
+        <p class="last">Adrian, Ruben, Francisco, David.</p>
+      </dd>
+    </dl>
+  </div>

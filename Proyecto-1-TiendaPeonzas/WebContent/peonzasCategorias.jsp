@@ -27,7 +27,7 @@
 	</div>
 	<div id="menu">
 		<ul id="nav">
-			<li id="home" class="activelink"><a href="Control?opcion=Home">HomeHome</a></li>
+			<li id="home" class="activelink"><a href="Control">Home</a></li>
 			<li id="who"><a href="#">About</a></li>
 			<li id="prod"><a href="#">Product</a></li>
 			<li id="serv"><a href="#">Services</a></li>
@@ -40,14 +40,9 @@
 				Bienvenidos a la tienda online <span
 					style="font-weight: bold; color: #02c0ff;">Peonzas Shop</span>
 			</h1>
-			<p class="big">Esta es la pagina de peonzas online mas famosa del 
-			mundo, un poco mas abajo tenemos nuestros productos.</p>
-			
-			
-			<c:forEach var="peonza" items="${productos}" varStatus="loopCount">
-				<c:if test="${loopCount.index mod '3' eq 0}">
-					<div class="clearbox">
-				</c:if>
+			<p class="big">Esta es la pagina de peonzas online mas famosa del
+				mundo, un poco mas abajo tenemos nuestros productos.</p>
+			<c:forEach var="peonza" items="${productos}">
 				<div id="box">
 					<h2>
 						<img src="images/last.gif" alt="ad">${peonza.nombre}</h2>
@@ -57,10 +52,6 @@
 					<blockquote>${peonza.descripcion}</blockquote>
 					<p id="precio">Precio : ${peonza.precio} $</p>
 				</div>
-				<c:if test="${loopCount.count mod '3' eq 0}">
-				
-					</div>
-				</c:if>
 			</c:forEach>
 			<p></p>
 		</div>

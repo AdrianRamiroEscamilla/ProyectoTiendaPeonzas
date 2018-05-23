@@ -71,11 +71,12 @@
 					<br />
 					<ul id="navlist">
 						<form method="post" action="Categorias">
-						<li><select name="desplegable" class="desplegable" >
+						<li><select name="opcion" class="desplegable" >
 								<option value="-MATERIAL" selected="selected">-MATERIAL</option>
 								<option value="Madera" >Madera</option>
 								<option value="Metal">Metal</option>
 								<option value="Plástico">Plástico</option>
+								<input type="hidden" name="categoria" value="material" />
 								<input type="submit" value="Enviar">
 						</select></li></form>
 						<form method="post" action="Categorias">

@@ -40,9 +40,14 @@
 				Bienvenidos a la tienda online <span
 					style="font-weight: bold; color: #02c0ff;">Peonzas Shop</span>
 			</h1>
-			<p class="big">Esta es la pagina de peonzas online mas famosa del
-				mundo, un poco mas abajo tenemos nuestros productos.</p>
-			<c:forEach var="peonza" items="${productos}">
+			<p class="big">Esta es la pagina de peonzas online mas famosa del 
+			mundo, un poco mas abajo tenemos nuestros productos.</p>
+			
+			
+			<c:forEach var="peonza" items="${catPeonzas}" varStatus="loopCount">
+				<c:if test="${loopCount.index mod '3' eq 0}">
+					<div class="clearbox">
+				</c:if>
 				<div id="box">
 					<h2>
 						<img src="images/last.gif" alt="ad">${peonza.nombre}</h2>
@@ -52,6 +57,10 @@
 					<blockquote>${peonza.descripcion}</blockquote>
 					<p id="precio">Precio : ${peonza.precio} $</p>
 				</div>
+				<c:if test="${loopCount.count mod '3' eq 0}">
+				
+					</div>
+				</c:if>
 			</c:forEach>
 			<p></p>
 		</div>
@@ -61,36 +70,51 @@
 				<dd>
 					<br />
 					<ul id="navlist">
-						<li><select name="desplegable" class="desplegable">
+						<form method="post" action="Categorias">
+						<li><select name="opcion" class="desplegable" >
 								<option value="-MATERIAL" selected="selected">-MATERIAL</option>
-								<option value="Madera">Madera</option>
-								<option value="Metal">Metal</option>
-								<option value="Plástico">Plástico</option>
-						</select></li>
-						<li><select name="desplegable2" class="desplegable">
+								<option value="madera" >Madera</option>
+								<option value="metal">Metal</option>
+								<option value="plástico">Plástico</option>
+								<input type="hidden" name="categoria" value="material" />
+								<input type="submit" value="Enviar">
+						</select></li></form>
+						<form method="post" action="Categorias">
+						<li><select name="opcion" class="desplegable">
 								<option value="-TAMAÑO" selected="selected">-TAMAÑO</option>
-								<option value="Grande">Grande</option>
-								<option value="Mediana">Mediana</option>
-								<option value="Pequeña">Pequeña</option>
-						</select></li>
-						<li><select name="desplegable3" class="desplegable">
+								<option value=">10.0"><a href="Categorias" >Grande</a></option>
+								<option value="between 9.0 and 10.0"><a href="Categorias" >Mediana</a></option>
+								<option value="<9"><a href="Categorias" >Pequeña</a></option>
+								<input type="hidden" name="categoria" value="tamanyo" />
+								<input type="submit" value="Enviar">
+						</select></li></form>
+						<form method="post" action="Categorias">
+						<li><select name="opcion" class="desplegable">
 								<option value="-PRECIO" selected="selected">-PRECIO</option>
-								<option value="5-10 €">5-10 €</option>
-								<option value="10-15 €">10-15 €</option>
-								<option value="15-20 €">15-20 €</option>
-						</select></li>
-						<li><select name="desplegable4" class="desplegable">
+								<option value="between 5.0 and 10.0">5-10 €</option>
+								<option value="between 10.0 and 15.0">10-15 €</option>
+								<option value="between 15.0 and 20.0">15-20 €</option>
+								<input type="hidden" name="categoria" value="precio" />
+								<input type="submit" value="Enviar">
+						</select></li></form>
+						<form method="post" action="Categorias">
+						<li><select name="opcion" class="desplegable">
 								<option value="-PUNTA" selected="selected">-PUNTA</option>
-								<option value="Afilada">Afilada</option>
-								<option value="Redonda">Redonda</option>
-								<option value="Plana">Plana</option>
-						</select></li>
-						<li><select name="desplegable5" class="desplegable">
+								<option value="1">Afilada</option>
+								<option value="2">Redonda</option>
+								<option value="3">Plana</option>
+								<input type="hidden" name="categoria" value="punta" />
+								<input type="submit" value="Enviar">
+						</select></li></form>
+						<form method="post" action="Categorias">
+						<li><select name="opcion" class="desplegable">
 								<option value="-CUERDA" selected="selected">-CUERDA</option>
-								<option value="Rígida">Rígida</option>
-								<option value="Trenzada">Trenzada</option>
-								<option value="Elástica">Elástica</option>
-						</select></li>
+								<option value="1">Rígida</option>
+								<option value="2">Trenzada</option>
+								<option value="3">Elástica</option>
+								<input type="hidden" name="categoria" value="cuerda" />
+								<input type="submit" value="Enviar">
+						</select></li></form>
 
 					</ul>
 					<p class="last">&nbsp;</p>
@@ -129,3 +153,4 @@
 	</div>
 </body>
 </html>
+

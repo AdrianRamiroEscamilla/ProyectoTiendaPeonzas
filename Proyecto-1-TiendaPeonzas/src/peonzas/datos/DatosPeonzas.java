@@ -65,6 +65,7 @@ public class DatosPeonzas {
 		if (categoria.equals("material")){
 			tipo = "='"+tipo+"'";
 		}
+	
 		String query = "Select * from peonzas WHERE "+categoria+tipo;
 		String ruta = "jdbc:mysql://10.90.36.16/proyectopeonzas";
 		String usuario = "admin";

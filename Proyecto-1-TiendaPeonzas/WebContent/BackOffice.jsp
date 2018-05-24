@@ -27,7 +27,7 @@
 	</div>
 	<div id="menu">
 		<ul id="nav">
-			<li id="home" class="activelink"><a href="Control?opcion=Home">Home</a></li>
+			<li id="home" class="activelink"><a href="Control?opcion=Home">HomeHome</a></li>
 			<li id="who"><a href="#">About</a></li>
 			<li id="prod"><a href="#">Product</a></li>
 			<li id="serv"><a href="#">Services</a></li>
@@ -36,30 +36,87 @@
 	</div>
 	<div id="container">
 		<div id="content">
-			<h1>
-				Bienvenidos a la tienda online <span
-					style="font-weight: bold; color: #02c0ff;">Peonzas Shop</span>
-			</h1>
-			<p class="big">Esta es la pagina de peonzas online mas famosa del 
-			mundo, un poco mas abajo tenemos nuestros productos.</p>
-			
-			
-			<c:forEach var="peonza" items="${catPeonzas}" varStatus="loopCount">
-				
-				<div id="box">
-					<h2>
-						<img src="images/last.gif" alt="ad">${peonza.nombre}</h2>
-					<div id="imgProducto">
-						<img src="${peonza.imagen}" alt="${peonza.nombre}">
-					</div>
-					<blockquote>${peonza.descripcion}</blockquote>
-					<p id="precio">Precio : ${peonza.precio} $</p>
-				</div>
-				
-			
-			</c:forEach>
-			<p></p>
-			
+			<div id="body">        
+                <h3>LISTADO DE PEONZAS</h3>
+                <table id=tablaProductos border="1">
+                    <thead>
+                        <tr>
+                            <th>NOMBRE</th>
+                            <th>MATERIAL</th>
+                            <th>TAMAÑO</th>
+                            <th>PRECIO</th>
+                            <th>CANTIDAD</th>
+                            <th>PUNTA</th>
+                            <th>CUERDA</th>
+                            <th>DESCRIPCION</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <c:forEach var="peonza" items="${productos}">
+                            <tr>
+                                <td>${peonza.nombre}</td>
+                                <td>${peonza.material}</td>
+                                <td>${peonza.tamanyo}</td>
+                                <td>${peonza.precio}</td>
+                                <td>${peonza.cantidad}</td>
+                                <td>${peonza.punta}</td>
+                                <td>${peonza.cuerda}</td>
+                                <td>${peonza.descripcion}</td>
+
+                                <td><a href="#">Detalles</a></td>
+                                <td><a href="#">Modificar</a></td>
+                                <td><a href="#">Eliminar</a></td>
+                            </tr>
+                        </c:forEach>
+                    </tbody>
+                </table>
+                <p><a href="#">Crear nuevo pais</a></p>
+
+                <br/>
+                <br/>
+                 <h3>LISTADO DE USUARIOS</h3>
+                <table id=tablaProductos border="1">
+                    <thead>
+                        <tr>
+                            <th>NOMBRE USUARIO</th>
+                            <th>NOMBRE</th>
+                            <th>APELLIDOS</th>
+                            <th>EMAIL</th>
+                            <th>ADMINISTRADOR</th>
+                            <th>CONTRASEÑA</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <c:forEach var="peonza" items="${productos}">
+                            <tr>
+                                <td>${peonza.nombre}</td>
+                                <td>${peonza.material}</td>
+                                <td>${peonza.tamanyo}</td>
+                                <td>${peonza.precio}</td>
+                                <td>${peonza.cantidad}</td>
+                                <td>${peonza.punta}</td>
+                                <td>${peonza.cuerda}</td>
+                                <td>${peonza.descripcion}</td>
+
+                                <td><a href="#">Detalles</a></td>
+                                <td><a href="#">Modificar</a></td>
+                                <td><a href="#">Eliminar</a></td>
+                            </tr>
+                        </c:forEach>
+                    </tbody>
+                </table>
+                <p><a href="#">Crear nuevo pais</a></p>
+
+                <br/>
+                <br/>
+                <div id="listado"></div>
+            </div>
 		</div>
 		
 		<div id="content_right">
@@ -81,7 +138,7 @@
 						<li><select name="opcion" class="desplegable">
 								<option value="-TAMAÑO" selected="selected">-TAMAÑO</option>
 								<option value=">10.0"><a href="Categorias" >Grande</a></option>
-								<option value=">9 and tamanyo <10"><a href="Categorias" >Mediana</a></option>
+								<option value="> 9.0 and tamanyo <10.0"><a href="Categorias" >Mediana</a></option>
 								<option value="<9"><a href="Categorias" >Pequeña</a></option>
 								<input type="hidden" name="categoria" value="tamanyo" />
 								<input type="submit" class="button" value="Enviar">
@@ -89,8 +146,8 @@
 						<form method="post" action="Categorias">
 						<li><select name="opcion" class="desplegable">
 								<option value="-PRECIO" selected="selected">-PRECIO</option>
-								<option value="> 10 and precio <15">10-15 €</option>
-								<option value="> 15 and precio < 20">15-20 €</option>
+								<option value="> 10 and precio < 15">10-15 €</option>
+								<option value="> 15 and  <20">15-20 €</option>
 								<option value=">20">>20 €</option>
 								<input type="hidden" name="categoria" value="precio" />
 								<input type="submit" class="button" value="Enviar">
@@ -111,7 +168,7 @@
 								<option value="2">Trenzada</option>
 								<option value="3">Elástica</option>
 								<input type="hidden" name="categoria" value="cuerda" />
-								<input type="submit" class="button" value="Enviar">
+								<input type="submit"  class="button" value="Enviar">
 						</select></li></form>
 
 					</ul>
@@ -139,8 +196,7 @@
 					<p class="last">Adrian, Ruben, Francisco, David.</p>
 				</dd>
 			</dl>
-		
-		
+		</div>
 	</div>
 	<div id="footer">
 		<p>
@@ -152,4 +208,3 @@
 	</div>
 </body>
 </html>
-

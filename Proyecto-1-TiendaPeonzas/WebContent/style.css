@@ -25,7 +25,10 @@ body {
     text-shadow: 4px 4px #0099c4;
     font-family:Luckiest Guy;
 }
-
+div#body {
+    color: black;
+    font-family: arial;
+}
 #banner p {
 	float: right;
 	margin: 10px 10px 0 0;
@@ -144,7 +147,7 @@ ul#nav li.activelink a, ul#nav li.activelink a:hover {
 @media only screen and (max-width: 900px) {
     /* For mobile phones: */
    #box {
-	width: 43%;
+	width: 43 %;
    }
 }
 

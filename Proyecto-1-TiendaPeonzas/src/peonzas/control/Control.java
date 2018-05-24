@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import peonzas.datos.DatosPeonzas;
-
+import peonzas.datos.DatosUsuario;
 import peonzas.domain.*;
 import peonzas.modelo.Coleccion;
 import peonzas.servicios.PeonzasService;
@@ -33,17 +33,38 @@ public class Control extends HttpServlet {
 	
     protected void processHandler(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException
     {
-
-
-    	
-    	
-    	ArrayList<Peonza> alPeonzas = new DatosPeonzas().seePeonza();
-    	
-    	request.setAttribute("productos", alPeonzas);
-
+    	ArrayList<Peonza> alPeonzas;
+    	ArrayList<Usuario> alUsuarios;
     	RequestDispatcher view;
-    	view = request.getRequestDispatcher("Home.jsp");
-    	view.forward(request, response);
+    	String opcion = request.getParameter("opcion");
+    	
+    	switch (opcion)
+    	{
+    		case "Home":
+    			alPeonzas = new DatosPeonzas().seePeonza();
+
+    	    	request.setAttribute("productos", alPeonzas);
+
+    	    	
+    	    	view = request.getRequestDispatcher("Home.jsp");
+    	    	view.forward(request, response);
+    	    	
+    			break;
+    		case "Backoffice":
+    			alPeonzas = new DatosPeonzas().seePeonza();
+    			alUsuarios = new DatosUsuario().seeUsuarios();
+    	    	request.setAttribute("productos", alPeonzas);
+    	    	request.setAttribute("usuarios", alUsuarios );
+    	    	
+    	    	view = request.getRequestDispatcher("BackOffice.jsp");
+    	    	view.forward(request, response);
+    			break;
+    		case "Detalles":
+    			
+    			break;
+    	}
+    	
+    	
     }
     /**
      * @see HttpServlet#HttpServlet()

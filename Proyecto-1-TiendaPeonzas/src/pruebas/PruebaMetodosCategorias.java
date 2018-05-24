@@ -1,4 +1,4 @@
-package peonzas.control;
+package pruebas;
 
 import java.util.ArrayList;
 

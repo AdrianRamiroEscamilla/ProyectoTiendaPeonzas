@@ -119,19 +119,25 @@ public class DatosPeonzas {
 	
 	}
 	
-	
-	public boolean altaPeonza(Peonza peonza){
+	/**
+	 * Método para el backoffice para añadir productos
+	 * @param peonza
+	 * @param punta
+	 * @param cuerda
+	 * @return
+	 */
+	public boolean altaPeonza(Peonza peonza, int punta, int cuerda){
 		ArrayList<Peonza> apeonzas = new ArrayList<>();
 		
-		String query = "INSERT INTO peonzas (id, nombre, tamanyo, precio, imagen, material, cantidad, descripcion) values   ('"+ peonza.getId() + "', '" + peonza.getNombre() 
-		+ "', '" + peonza.getTamanyo() + "', '" + peonza.getImagen() + "', '" + peonza.getMaterial() + "', '" + peonza.getCantidad() + "', '" + peonza.getDescripcion() +"')";	
-		
-		String ruta = "jdbc:mysql://10.90.36.16/proyectopeonzas";      
+
+		String query2 = "INSERT INTO peonzas ( nombrePeonza, tamanyo, precio, imagen, material, cantidad, punta, cuerda, descripcion) values('"+peonza.getNombre()+"', '"+peonza.getTamanyo()+"', '"+peonza.getPrecio()+"', '"+peonza.getMaterial()+"','"+peonza.getImagen()+"', '"+peonza.getCantidad()+"', '"+punta+"', '"+cuerda+"', '"+peonza.getDescripcion()+"')";
+
+		String ruta = "jdbc:mysql://10.90.36.16/proyectopeonzas";     
 		String usuario = "admin";
 		String password = "1111";
 		
 		try {
-			int modif = Acceso.modifMySql(password, usuario, password, query);
+			int modif = Acceso.modifMySql(ruta, usuario, password, query2);
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

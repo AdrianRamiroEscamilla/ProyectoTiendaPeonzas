@@ -52,9 +52,9 @@ public class Control extends HttpServlet {
     			break;
     		case "Backoffice":
     			alPeonzas = new DatosPeonzas().seePeonza();
-    			//alUsuarios = new DatosUsuario().seeUsuarios();
+    			alUsuarios = new DatosUsuario().seeUsuarios();
     	    	request.setAttribute("productos", alPeonzas);
-    	    	//request.setAttribute("usuarios", alUsuarios );
+    	    	request.setAttribute("usuarios", alUsuarios );
     	    	
     	    	view = request.getRequestDispatcher("BackOffice.jsp");
     	    	view.forward(request, response);

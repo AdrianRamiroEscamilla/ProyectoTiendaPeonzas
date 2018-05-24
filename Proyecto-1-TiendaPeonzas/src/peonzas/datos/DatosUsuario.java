@@ -118,7 +118,7 @@ public class DatosUsuario {
 			 while (Rs.next()){
 				 Usuario usuario = new Usuario();
 				 usuario.setIdUsuario(Rs.getInt(1));
-				 usuario.setNombre_usuario(Rs.getString(2));
+				 usuario.setNombreUsuario(Rs.getString(2));
 				 usuario.setEmail(Rs.getString(3));
 				 usuario.setContrasena(Rs.getString(4));
 				 usuario.setNombre(Rs.getString(5));

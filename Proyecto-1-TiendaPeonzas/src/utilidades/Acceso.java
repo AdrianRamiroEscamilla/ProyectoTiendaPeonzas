@@ -19,13 +19,15 @@ public class Acceso {
 			con = DriverManager.getConnection(driverUrl,user,password);
 	    	
 	    	st =  con.createStatement();
-	    	
+	    	System.out.println(con.toString());
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
+			System.out.println(e);
 			e.printStackTrace();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			System.out.println(e);
+
 		}
     
     	
@@ -61,7 +63,8 @@ public static int modifMySql(String driverUrl, String user, String password, Str
 	int num = -3;
 	try{
 	st = aMysql( driverUrl,  user,  password);
-	
+	System.out.println("Tenemos el stttt con exito");
+
 	num = st.executeUpdate(query);
 	}catch (SQLException e){
 		e.toString();

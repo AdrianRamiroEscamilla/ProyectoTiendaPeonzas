@@ -4,7 +4,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-<title>Peonzas Shop</title>
+<title>Peonzas Details</title>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <link
 	href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Gloria+Hallelujah|Luckiest+Guy"
@@ -27,7 +27,7 @@
 	</div>
 	<div id="menu">
 		<ul id="nav">
-			<li id="home" class="activelink"><a href="Control?opcion=Home">Home</a></li>
+			<li id="home" class="activelink"><a href="Control">Home</a></li>
 			<li id="who"><a href="#">About</a></li>
 			<li id="prod"><a href="#">Product</a></li>
 			<li id="serv"><a href="#">Services</a></li>
@@ -37,35 +37,28 @@
 	<div id="container">
 		<div id="content">
 			<h1>
-				Bienvenidos a la tienda online <span
-					style="font-weight: bold; color: #02c0ff;">Peonzas Shop</span>
+				Detalles de peonza <span
+					style="font-weight: bold; color: #02c0ff;">${Peonza.nombre }</span>
 			</h1>
-			<p class="big">Esta es la pagina de peonzas online mas famosa del 
-			mundo, un poco mas abajo tenemos nuestros productos.</p>
-			
-			
-			<c:forEach var="peonza" items="${productos}" varStatus="loopCount">
-				<c:if test="${loopCount.index mod '3' eq 0}">
-					<div class="clearbox">
-				</c:if>
+			<p class="big">Introdúcete en el mundo de las peonzas y rueda por un universo de diversión.</p>
+
 				<div id="box">
 					<h2>
-						<img src="images/last.gif" alt="ad">${peonza.nombre}</h2>
+						fghjnh${peonza.nombre}</h2>
 					<div id="imgProducto">
 						<img src="${peonza.imagen}" alt="${peonza.nombre}">
 					</div>
 					<blockquote>${peonza.descripcion}</blockquote>
 					<p id="precio">Precio : ${peonza.precio} $</p>
-					<input type="submit" value="Ver detalles" />                     
-                    <input type="hidden" name="idPeonza" value="${peonza.idPeonza}">
-                     <input type="hidden" name="opcion" value="Detalles">
+					
+					<input type="submit" value="comprar" />                     
+                    <input type="hidden" name="compra" value="${peonza.idPeonza}">
 				</div>
-				<c:if test="${loopCount.count mod '3' eq 0}">
+			
+		<div class="clearbox">
 				
-					</div>
-				</c:if>
-			</c:forEach>
 			<p></p>
+		</div>
 		</div>
 		<div id="content_right">
 			<dl class="curved">

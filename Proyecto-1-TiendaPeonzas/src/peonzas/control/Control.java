@@ -33,18 +33,26 @@ public class Control extends HttpServlet {
 	
     protected void processHandler(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException
     {
-
-
+    	if (request.getParameter("opcion").equals("Detalles"))  {
+    	    // cadena no está vacía
+    		processDetailPeonza(request,response);   	
+    		
+    	}else{
+    	processHome(request, response);
+    	}
+    	//String opcion= request.getParameter("opcion");
     	
-    	
-    	ArrayList<Peonza> alPeonzas = new DatosPeonzas().seePeonza();
-    	
-    	request.setAttribute("productos", alPeonzas);
-
-    	RequestDispatcher view;
-    	view = request.getRequestDispatcher("Home.jsp");
-    	view.forward(request, response);
+    	/*
+    	if (request.getParameter("opcion")!=null){
+    		    		
+    		processDetailPeonza(request,response);
+    	}else if (request.getParameter("opcion")==null){
+    		
+    		processHome(request, response);   	
+		    	
+    		} */
     }
+    
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -70,6 +78,26 @@ public class Control extends HttpServlet {
 		doGet(request, response);
 	}
 	
+	protected void processDetailPeonza(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String idPeonza = request.getParameter("idPeonza");
+		request.setAttribute("idPeonza", idPeonza);
+		
+		RequestDispatcher view;
+    	view = request.getRequestDispatcher("vistaDetallada.jsp");
+    	view.forward(request, response);
+	}
+	
+	protected void processHome(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		ArrayList<Peonza> alPeonzas = new DatosPeonzas().seePeonza();
+    	
+    	request.setAttribute("productos", alPeonzas);
+
+    	RequestDispatcher view;
+    	view = request.getRequestDispatcher("Home.jsp");
+    	view.forward(request, response);
+	}
 	
 	
 

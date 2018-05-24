@@ -86,7 +86,6 @@ ul#nav li.activelink a, ul#nav li.activelink a:hover {
 	margin: auto;
 	padding: 0;
 }
-
 #box {
 	width: 29%;
 	padding: 10px;
@@ -96,6 +95,17 @@ ul#nav li.activelink a, ul#nav li.activelink a:hover {
 	margin-bottom: 2%;
 	float: left;
 	/*height: 500px;*/
+}
+
+#box2 {
+	width: 50%;
+	padding: 10px;
+	border: 1px solid #ff9933;
+	background: #e7f1f8;
+	margin-right: 2%;
+	margin-bottom: 2%;
+	float: left;
+	height: 500px;
 }
 .clearbox{
 	clear:both;

@@ -1,5 +1,9 @@
 package pruebas;
 
+import java.util.ArrayList;
+
+import com.mysql.fabric.xmlrpc.base.Array;
+
 import peonzas.datos.DatosPeonzas;
 import peonzas.datos.DatosUsuario;
 import peonzas.domain.Usuario;
@@ -7,10 +11,10 @@ import peonzas.domain.Usuario;
 public class PruebaAltaModificacionUsuario {
 
 	public static void main(String[] args) {
-
-	pruebaAlta();
-	pruebaChange();
-	pruebaDelete();
+	pruebaSeeUsuarios();
+	//pruebaAlta();
+	//pruebaChange();
+	//pruebaDelete();
 	
 }
 	
@@ -40,6 +44,17 @@ public class PruebaAltaModificacionUsuario {
 	du.userDelete(usuario);
 		System.out.println(usuario.toString());}
 	
+	/**
+	 * prueba para la eliminación de los usuarios
+	 */
+	
+	public static void pruebaSeeUsuarios(){
+		
+
+		DatosUsuario du = new DatosUsuario();	
+		ArrayList<Usuario> array=du.seeUsuarios();
+	
+	}
 	
 
 /**

@@ -14,10 +14,10 @@ public class PruebaMetodosCategorias {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		prueba1Material();
-		prueba2Tamanyo();
-		prueba3Precio();
-		prueba4Rango();
+		//prueba1Material();
+		//prueba2Tamanyo();
+		//prueba3Precio();
+		//prueba4Rango();
 		}
 		/**
 		 * prueba1Material

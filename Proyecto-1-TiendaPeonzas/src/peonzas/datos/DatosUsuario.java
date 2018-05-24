@@ -22,7 +22,7 @@ public class DatosUsuario {
 		String password = "1111";
 		//String query = "insert into usuarios (nombre_usuario, email, contraseña, nombre, apellidos, administrador) values ('you', 'eee@coreo.com', '1111','nombre','apellidos',1)";
 
-		String query = "insert into usuarios (nombre_usuario, email, contraseña, nombre, apellidos, administrador)values ('"+usuario.getNombre_usuario()+"','"+usuario.getEmail()+"','"+usuario.getContrasena()+"','"+usuario.getNombre()+"',"
+		String query = "insert into usuarios (nombre_usuario, email, contraseña, nombre, apellidos, administrador)values ('"+usuario.getNombreUsuario()+"','"+usuario.getEmail()+"','"+usuario.getContrasena()+"','"+usuario.getNombre()+"',"
 						+ "'"+usuario.getApellidos()+"','"+usuario.getAdministrador()+"')";
 	
 		

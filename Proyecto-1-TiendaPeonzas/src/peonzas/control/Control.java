@@ -48,7 +48,14 @@ public class Control extends HttpServlet {
     	    	view.forward(request, response);
     	    	
     			break;
-    		case "":
+    		case "Backoffice":
+    			alPeonzas = new DatosPeonzas().seePeonza();
+
+    	    	request.setAttribute("productos", alPeonzas);
+
+    	    	RequestDispatcher viewBackOffice;
+    	    	viewBackOffice = request.getRequestDispatcher("BackOffice.jsp");
+    	    	viewBackOffice.forward(request, response);
     			break;
     	}
     	

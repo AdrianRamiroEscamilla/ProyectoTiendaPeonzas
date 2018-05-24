@@ -28,7 +28,7 @@
 	<div id="menu">
 		<ul id="nav">
 			<li id="home" class="activelink"><a href="Control?opcion=Home">HomeHome</a></li>
-			<li id="who"><a href="Control?opcion=Backoffice">About</a></li>
+			<li id="who"><a href="#">About</a></li>
 			<li id="prod"><a href="#">Product</a></li>
 			<li id="serv"><a href="#">Services</a></li>
 			<li id="cont"><a href="#">Contact us</a></li>
@@ -36,33 +36,49 @@
 	</div>
 	<div id="container">
 		<div id="content">
-			<h1>
-				Bienvenidos a la tienda online <span
-					style="font-weight: bold; color: #02c0ff;">Peonzas Shop</span>
-			</h1>
-			<p class="big">Esta es la pagina de peonzas online mas famosa del 
-			mundo, un poco mas abajo tenemos nuestros productos.</p>
-			
-			
-			<c:forEach var="peonza" items="${productos}" varStatus="loopCount">
-				<c:if test="${loopCount.index mod '3' eq 0}">
-					<div class="clearbox">
-				</c:if>
-				<div id="box">
-					<h2>
-						<img src="images/last.gif" alt="ad">${peonza.nombre}</h2>
-					<div id="imgProducto">
-						<img src="${peonza.imagen}" alt="${peonza.nombre}">
-					</div>
-					<blockquote>${peonza.descripcion}</blockquote>
-					<p id="precio">Precio : ${peonza.precio} $</p>
-				</div>
-				<c:if test="${loopCount.count mod '3' eq 0}">
-				
-					</div>
-				</c:if>
-			</c:forEach>
-			<p></p>
+			<div id="body">        
+                <h3>LISTADO DE PEONZAS</h3>
+                <table id=tablaProductos border="1">
+                    <thead>
+                        <tr>
+                            <th>NOMBRE</th>
+                            <th>MATERIAL</th>
+                            <th>TAMAÑO</th>
+                            <th>PRECIO</th>
+                            <th>CANTIDAD</th>
+                            <th>PUNTA</th>
+                            <th>CUERDA</th>
+                            <th>DESCRIPCION</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <c:forEach var="peonza" items="${productos}">
+                            <tr>
+                                <td>${peonza.nombre}</td>
+                                <td>${peonza.material}</td>
+                                <td>${peonza.tamanyo}</td>
+                                <td>${peonza.precio}</td>
+                                <td>${peonza.cantidad}</td>
+                                <td>${peonza.punta}</td>
+                                <td>${peonza.cuerda}</td>
+                                <td>${peonza.descripcion}</td>
+
+                                <td><a href="#">Detalles</a></td>
+                                <td><a href="#">Modificar</a></td>
+                                <td><a href="#">Eliminar</a></td>
+                            </tr>
+                        </c:forEach>
+                    </tbody>
+                </table>
+                <p><a href="#">Crear nuevo pais</a></p>
+
+                <br/>
+                <br/>
+                <div id="listado"></div>
+            </div>
 		</div>
 		
 		<div id="content_right">

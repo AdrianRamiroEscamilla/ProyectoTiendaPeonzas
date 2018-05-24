@@ -77,6 +77,44 @@
 
                 <br/>
                 <br/>
+                 <h3>LISTADO DE USUARIOS</h3>
+                <table id=tablaProductos border="1">
+                    <thead>
+                        <tr>
+                            <th>NOMBRE USUARIO</th>
+                            <th>NOMBRE</th>
+                            <th>APELLIDOS</th>
+                            <th>EMAIL</th>
+                            <th>ADMINISTRADOR</th>
+                            <th>CONTRASEÑA</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <c:forEach var="peonza" items="${productos}">
+                            <tr>
+                                <td>${peonza.nombre}</td>
+                                <td>${peonza.material}</td>
+                                <td>${peonza.tamanyo}</td>
+                                <td>${peonza.precio}</td>
+                                <td>${peonza.cantidad}</td>
+                                <td>${peonza.punta}</td>
+                                <td>${peonza.cuerda}</td>
+                                <td>${peonza.descripcion}</td>
+
+                                <td><a href="#">Detalles</a></td>
+                                <td><a href="#">Modificar</a></td>
+                                <td><a href="#">Eliminar</a></td>
+                            </tr>
+                        </c:forEach>
+                    </tbody>
+                </table>
+                <p><a href="#">Crear nuevo pais</a></p>
+
+                <br/>
+                <br/>
                 <div id="listado"></div>
             </div>
 		</div>

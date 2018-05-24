@@ -1,6 +1,8 @@
 package peonzas.datos;
 
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import peonzas.domain.Usuario;
 
@@ -97,6 +99,41 @@ public class DatosUsuario {
 		return booleano;
 		
 		
+	}
+	
+	/**
+	 * seeUsuarios
+	 * Método para listar los usuarios
+	 * @return
+	 */
+	public ArrayList <Usuario> seeUsuarios (){
+		ArrayList <Usuario> users = new ArrayList<>();
+		String ruta = "jdbc:mysql://10.90.36.16:3306/proyectopeonzas";
+		String user = "admin";
+		String password = "1111";
+
+		String query = 	"select * from usuarios";
+		try {
+			 ResultSet Rs =Acceso.consultMySql(ruta, user, password, query);
+			 while (Rs.next()){
+				 Usuario usuario = new Usuario();
+				 usuario.setIdUsuario(Rs.getInt(1));
+				 usuario.setNombre_usuario(Rs.getString(2));
+				 usuario.setEmail(Rs.getString(3));
+				 usuario.setContrasena(Rs.getString(4));
+				 usuario.setNombre(Rs.getString(5));
+				 usuario.setApellidos(Rs.getString(6));
+				 usuario.setAdministrador(Rs.getInt(7));
+				 
+				 users.add(usuario);
+				 System.out.println(usuario.getNombre());
+			 }
+		
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return users;
 	}
 
 	

@@ -72,6 +72,7 @@
 					<br />
 					<ul id="navlist">
 						<form method="post" action="Categorias">
+
 						<li><select name="opcion" class="desplegable" >
 								<option value="-MATERIAL" selected="selected">-MATERIAL</option>
 								<option value="madera" >Madera</option>

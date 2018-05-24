@@ -27,9 +27,13 @@ public class DatosPeonzas {
 
 		ResultSet rs = Acceso.consultMySql(ruta, usuario, password, query);
 		Peonza peonza;
+		Punta punta ;
+		Cuerda cuerda ;
 		try {
 			while (rs.next()) {
 				peonza= new Peonza();
+				punta = new Punta();
+				cuerda = new Cuerda();
 				peonza.setId(rs.getInt(1));
 				peonza.setNombre(rs.getString(2));
 				peonza.setTamanyo(rs.getDouble(3));
@@ -37,6 +41,10 @@ public class DatosPeonzas {
 				peonza.setImagen(rs.getString(5));
 				peonza.setMaterial(rs.getString(6));
 				peonza.setCantidad(rs.getInt(7));
+				punta.setIdPunta(rs.getInt(8));
+				peonza.setPunta(punta);
+				cuerda.setId(rs.getInt(9));
+				peonza.setCuerda(cuerda);
 				peonza.setDescripcion(rs.getString(10));
 
 				alPeonzas.add(peonza);
@@ -65,6 +73,15 @@ public class DatosPeonzas {
 		if (categoria.equals("material")){
 			tipo = "='"+tipo+"'";
 		}
+		else if(categoria.equals("punta"))
+		{
+			tipo = "='"+tipo+"'";
+		}
+		if(categoria.equals("cuerda"))
+		{
+			tipo = "='"+tipo+"'";
+		}
+	
 		String query = "Select * from peonzas WHERE "+categoria+tipo;
 		String ruta = "jdbc:mysql://10.90.36.16/proyectopeonzas";
 		String usuario = "admin";

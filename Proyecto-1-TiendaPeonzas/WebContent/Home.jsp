@@ -64,42 +64,58 @@
 			</c:forEach>
 			<p></p>
 		</div>
+		
 		<div id="content_right">
 			<dl class="curved">
 				<dt>PRODUCTOS POR CATEGORIAS</dt>
 				<dd>
 					<br />
 					<ul id="navlist">
-						<li><select name="desplegable" class="desplegable">
+						<form method="post" action="Categorias">
+						<li><select name="opcion" class="desplegable" >
 								<option value="-MATERIAL" selected="selected">-MATERIAL</option>
-								<option value="Madera">Madera</option>
-								<option value="Metal">Metal</option>
-								<option value="Plástico">Plástico</option>
-						</select></li>
-						<li><select name="desplegable2" class="desplegable">
+								<option value="madera" >Madera</option>
+								<option value="metal">Metal</option>
+								<option value="plástico">Plástico</option>
+								<input type="hidden" name="categoria" value="material" />
+								<input type="submit" class="button" value="Enviar">
+						</select></li></form>
+						<form method="post" action="Categorias">
+						<li><select name="opcion" class="desplegable">
 								<option value="-TAMAÑO" selected="selected">-TAMAÑO</option>
-								<option value="Grande">Grande</option>
-								<option value="Mediana">Mediana</option>
-								<option value="Pequeña">Pequeña</option>
-						</select></li>
-						<li><select name="desplegable3" class="desplegable">
+								<option value=">10.0"><a href="Categorias" >Grande</a></option>
+								<option value="> 9.0 and tamanyo <10.0"><a href="Categorias" >Mediana</a></option>
+								<option value="<9"><a href="Categorias" >Pequeña</a></option>
+								<input type="hidden" name="categoria" value="tamanyo" />
+								<input type="submit" class="button" value="Enviar">
+						</select></li></form>
+						<form method="post" action="Categorias">
+						<li><select name="opcion" class="desplegable">
 								<option value="-PRECIO" selected="selected">-PRECIO</option>
-								<option value="5-10 €">5-10 €</option>
-								<option value="10-15 €">10-15 €</option>
-								<option value="15-20 €">15-20 €</option>
-						</select></li>
-						<li><select name="desplegable4" class="desplegable">
+								<option value="> 10 and precio < 15">10-15 €</option>
+								<option value="> 15 and  <20">15-20 €</option>
+								<option value=">20">>20 €</option>
+								<input type="hidden" name="categoria" value="precio" />
+								<input type="submit" class="button" value="Enviar">
+						</select></li></form>
+						<form method="post" action="Categorias">
+						<li><select name="opcion" class="desplegable">
 								<option value="-PUNTA" selected="selected">-PUNTA</option>
-								<option value="Afilada">Afilada</option>
-								<option value="Redonda">Redonda</option>
-								<option value="Plana">Plana</option>
-						</select></li>
-						<li><select name="desplegable5" class="desplegable">
+								<option value="1">Afilada</option>
+								<option value="2">Redonda</option>
+								<option value="3">Plana</option>
+								<input type="hidden" name="categoria" value="punta" />
+								<input type="submit" class="button" value="Enviar">
+						</select></li></form>
+						<form method="post" action="Categorias">
+						<li><select name="opcion" class="desplegable">
 								<option value="-CUERDA" selected="selected">-CUERDA</option>
-								<option value="Rígida">Rígida</option>
-								<option value="Trenzada">Trenzada</option>
-								<option value="Elástica">Elástica</option>
-						</select></li>
+								<option value="1">Rígida</option>
+								<option value="2">Trenzada</option>
+								<option value="3">Elástica</option>
+								<input type="hidden" name="categoria" value="cuerda" />
+								<input type="submit"  class="button" value="Enviar">
+						</select></li></form>
 
 					</ul>
 					<p class="last">&nbsp;</p>

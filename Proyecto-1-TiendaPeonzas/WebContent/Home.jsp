@@ -27,13 +27,9 @@
 	</div>
 	<div id="menu">
 		<ul id="nav">
-<<<<<<< HEAD
+
 			<li id="home" class="activelink"><a href="Control?opcion=Home">Home</a></li>
-			<li id="who"><a href="#">About</a></li>
-=======
-			<li id="home" class="activelink"><a href="Control?opcion=Home">HomeHome</a></li>
 			<li id="who"><a href="Control?opcion=Backoffice">About</a></li>
->>>>>>> master
 			<li id="prod"><a href="#">Product</a></li>
 			<li id="serv"><a href="#">Services</a></li>
 			<li id="cont"><a href="#">Contact us</a></li>
@@ -62,8 +58,9 @@
 					<blockquote>${peonza.descripcion}</blockquote>
 					<p id="precio">Precio : ${peonza.precio} $</p>
 					<input type="submit" value="Ver detalles" />                     
-                    <input type="hidden" name="idPeonza" value="${peonza.idPeonza}">
+                    
                      <input type="hidden" name="opcion" value="Detalles">
+                     <input type="hidden" name="idPeonza" value="01"}>
 				</div>
 				<c:if test="${loopCount.count mod '3' eq 0}">
 				
@@ -83,13 +80,13 @@
 
 						<li><select name="opcion" class="desplegable" >
 								<option value="-MATERIAL" selected="selected">-MATERIAL</option>
-<<<<<<< HEAD
+
 								<option value="Madera"><a></a>Madera</option>
 								<option value="Metal">Metal</option>
 								<option value="Plástico">Plástico</option>
 						</select></li>
 						<li><select name="desplegable2" class="desplegable">
-=======
+
 								<option value="madera" >Madera</option>
 								<option value="metal">Metal</option>
 								<option value="plástico">Plástico</option>
@@ -98,7 +95,7 @@
 						</select></li></form>
 						<form method="post" action="Categorias">
 						<li><select name="opcion" class="desplegable">
->>>>>>> master
+
 								<option value="-TAMAÑO" selected="selected">-TAMAÑO</option>
 								<option value=">10.0"><a href="Categorias" >Grande</a></option>
 								<option value="> 9.0 and tamanyo <10.0"><a href="Categorias" >Mediana</a></option>

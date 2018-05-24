@@ -33,7 +33,6 @@ public class Control extends HttpServlet {
 	
     protected void processHandler(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException
     {
-<<<<<<< HEAD
     	if (request.getParameter("opcion").equals("Detalles"))  {
     	    // cadena no está vacía
     		processDetailPeonza(request,response);   	
@@ -52,7 +51,6 @@ public class Control extends HttpServlet {
     		processHome(request, response);   	
 		    	
     		} */
-=======
     	ArrayList<Peonza> alPeonzas;
     	ArrayList<Usuario> alUsuarios;
     	RequestDispatcher view;
@@ -72,20 +70,20 @@ public class Control extends HttpServlet {
     			break;
     		case "Backoffice":
     			alPeonzas = new DatosPeonzas().seePeonza();
-    			alUsuarios = new DatosUsuario().seeUsuarios();
+    			//alUsuarios = new DatosUsuario().seeUsuarios();
     	    	request.setAttribute("productos", alPeonzas);
-    	    	request.setAttribute("usuarios", alUsuarios );
+    	    	//request.setAttribute("usuarios", alUsuarios );
     	    	
     	    	view = request.getRequestDispatcher("BackOffice.jsp");
     	    	view.forward(request, response);
     			break;
     		case "Detalles":
-    			
+    			processDetailPeonza(request, response);
     			break;
     	}
     	
     	
->>>>>>> master
+
     }
     
     /**
@@ -123,16 +121,7 @@ public class Control extends HttpServlet {
     	view.forward(request, response);
 	}
 	
-	protected void processHome(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		ArrayList<Peonza> alPeonzas = new DatosPeonzas().seePeonza();
-    	
-    	request.setAttribute("productos", alPeonzas);
-
-    	RequestDispatcher view;
-    	view = request.getRequestDispatcher("Home.jsp");
-    	view.forward(request, response);
-	}
+	
 	
 	
 

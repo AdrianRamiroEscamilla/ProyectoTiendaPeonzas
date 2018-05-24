@@ -73,7 +73,7 @@
                         </c:forEach>
                     </tbody>
                 </table>
-                <p><a href="#">Crear nuevo pais</a></p>
+                <p><a href="#">Crear nueva peonza</a></p>
 
                 <br/>
                 <br/>
@@ -93,16 +93,15 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <c:forEach var="peonza" items="${productos}">
+                        <c:forEach var="usuario" items="${usuarios}">
                             <tr>
+                                <td>${usuario.nombreUsuario}</td>
                                 <td>${peonza.nombre}</td>
-                                <td>${peonza.material}</td>
-                                <td>${peonza.tamanyo}</td>
-                                <td>${peonza.precio}</td>
-                                <td>${peonza.cantidad}</td>
-                                <td>${peonza.punta}</td>
-                                <td>${peonza.cuerda}</td>
-                                <td>${peonza.descripcion}</td>
+                                <td>${peonza.apellidos}</td>
+                                <td>${peonza.email}</td>
+                                <td>${peonza.administrador}</td>
+                                <td>${peonza.contrasena}</td>
+                              
 
                                 <td><a href="#">Detalles</a></td>
                                 <td><a href="#">Modificar</a></td>
@@ -111,7 +110,7 @@
                         </c:forEach>
                     </tbody>
                 </table>
-                <p><a href="#">Crear nuevo pais</a></p>
+                <p><a href="#">Crear nuevo usuario</a></p>
 
                 <br/>
                 <br/>

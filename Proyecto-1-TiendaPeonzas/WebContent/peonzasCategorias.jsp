@@ -75,7 +75,7 @@
 								<option value="metal">Metal</option>
 								<option value="plástico">Plástico</option>
 								<input type="hidden" name="categoria" value="material" />
-								<input type="submit" value="Enviar">
+								<input type="submit" class="button" value="Enviar">
 						</select></li></form>
 						<form method="post" action="Categorias">
 						<li><select name="opcion" class="desplegable">
@@ -84,7 +84,7 @@
 								<option value=">9 and tamanyo <10"><a href="Categorias" >Mediana</a></option>
 								<option value="<9"><a href="Categorias" >Pequeña</a></option>
 								<input type="hidden" name="categoria" value="tamanyo" />
-								<input type="submit" value="Enviar">
+								<input type="submit" class="button" value="Enviar">
 						</select></li></form>
 						<form method="post" action="Categorias">
 						<li><select name="opcion" class="desplegable">
@@ -93,7 +93,7 @@
 								<option value="> 15 and precio < 20">15-20 €</option>
 								<option value=">20">>20 €</option>
 								<input type="hidden" name="categoria" value="precio" />
-								<input type="submit" value="Enviar">
+								<input type="submit" class="button" value="Enviar">
 						</select></li></form>
 						<form method="post" action="Categorias">
 						<li><select name="opcion" class="desplegable">
@@ -102,7 +102,7 @@
 								<option value="2">Redonda</option>
 								<option value="3">Plana</option>
 								<input type="hidden" name="categoria" value="punta" />
-								<input type="submit" value="Enviar">
+								<input type="submit" class="button" value="Enviar">
 						</select></li></form>
 						<form method="post" action="Categorias">
 						<li><select name="opcion" class="desplegable">
@@ -111,7 +111,7 @@
 								<option value="2">Trenzada</option>
 								<option value="3">Elástica</option>
 								<input type="hidden" name="categoria" value="cuerda" />
-								<input type="submit" value="Enviar">
+								<input type="submit" class="button" value="Enviar">
 						</select></li></form>
 
 					</ul>

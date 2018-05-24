@@ -120,7 +120,7 @@ public class DatosPeonzas {
 	}
 	
 	/**
-	 * Método para el backoffice para añadir productos
+	 * Mï¿½todo para el backoffice para aï¿½adir productos
 	 * @param peonza
 	 * @param punta
 	 * @param cuerda
@@ -144,6 +144,33 @@ public class DatosPeonzas {
 			e.printStackTrace();
 		}
 		System.out.println(apeonzas.size());
+		return false;
+
+	}
+	
+	/**
+	 * Mï¿½todo para el backoffice para eliminar productos
+	 * @param peonza
+	 * @param punta
+	 * @param cuerda
+	 * @return
+	 */
+	public boolean deletePeonza(Peonza peonza){
+		
+		boolean booleano = false;
+		String query2 = "delete from peonzas where idPeonza='"+peonza.getId()+"'";
+
+		String ruta = "jdbc:mysql://10.90.36.16/proyectopeonzas";     
+		String usuario = "admin";
+		String password = "1111";
+		
+		try {
+			int modif = Acceso.modifMySql(ruta, usuario, password, query2);
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return false;
 
 	}

@@ -101,4 +101,28 @@ public class DatosPeonzas {
 		return apeonzas;
 	
 	}
+	
+	
+	public boolean altaPeonza(Peonza peonza){
+		ArrayList<Peonza> apeonzas = new ArrayList<>();
+		
+		String query = "INSERT INTO peonzas (id, nombre, tamanyo, precio, imagen, material, cantidad, descripcion) values   ('"+ peonza.getId() + "', '" + peonza.getNombre() 
+		+ "', '" + peonza.getTamanyo() + "', '" + peonza.getImagen() + "', '" + peonza.getMaterial() + "', '" + peonza.getCantidad() + "', '" + peonza.getDescripcion() +"')";	
+		
+		String ruta = "jdbc:mysql://10.90.36.16/proyectopeonzas";      
+		String usuario = "admin";
+		String password = "1111";
+		
+		try {
+			int modif = Acceso.modifMySql(password, usuario, password, query);
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println(apeonzas.size());
+		return false;
+
+	}
+	
 }

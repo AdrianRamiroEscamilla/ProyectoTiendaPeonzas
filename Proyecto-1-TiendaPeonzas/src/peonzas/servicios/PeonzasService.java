@@ -98,7 +98,7 @@ public class PeonzasService implements IPeonzasService{
 	  public void muestraPeonzasTamanyo(String tamanyo){
 		int i=0;
 		for(i=0;i<ListaCuerdas.size();i++){
-			if(listaPeonzas.get(i).equals(tamanyo)){
+			if(ListaPeonzas.get(i).equals(tamanyo)){
 				System.out.println(ListaCuerdas.get(i));
 			}
 		}

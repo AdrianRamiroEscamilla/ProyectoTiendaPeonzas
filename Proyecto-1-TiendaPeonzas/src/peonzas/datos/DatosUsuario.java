@@ -52,7 +52,7 @@ public class DatosUsuario {
 		String user = "admin";
 		String password = "1111";
 
-		String query = 	"update usuarios set nombre_usuario='"+usuario.getNombre_usuario()+"', email='"+usuario.getEmail()+"', contraseña='"+usuario.getContrasena()+"', nombre='"+usuario.getNombre()+"', apellidos='"+usuario.getApellidos()+"', administrador="+usuario.getAdministrador()+" WHERE idUsuario="+usuario.getIdUsuario();
+		String query = 	"update usuarios set nombre_usuario='"+usuario.getNombreUsuario()+"', email='"+usuario.getEmail()+"', contraseña='"+usuario.getContrasena()+"', nombre='"+usuario.getNombre()+"', apellidos='"+usuario.getApellidos()+"', administrador="+usuario.getAdministrador()+" WHERE idUsuario="+usuario.getIdUsuario();
 
 		
 		try {

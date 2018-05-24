@@ -3,7 +3,7 @@ package peonzas.domain;
 public class Usuario {
 
 int idUsuario;
-String nombre_usuario;
+String nombreUsuario;
 String email;
 String contrasena;
 String nombre;
@@ -24,18 +24,18 @@ public Usuario() {
 /**
  * 
  * @param idUsuario
- * @param nombre_usuario
+ * @param nombreUsuario
  * @param email
  * @param contrasena
  * @param nombre
  * @param apellidos
  * @param administrador
  */
-public Usuario(int idUsuario, String nombre_usuario, String email, String contrasena, String nombre, String apellidos,
+public Usuario(int idUsuario, String nombreUsuario, String email, String contrasena, String nombre, String apellidos,
 		int administrador) {
 	super();
 	this.idUsuario = idUsuario;
-	this.nombre_usuario = nombre_usuario;
+	this.nombreUsuario = nombreUsuario;
 	this.email = email;
 	this.contrasena = contrasena;
 	this.nombre = nombre;
@@ -67,8 +67,8 @@ public void setIdUsuario(int idUsuario) {
  * @return
  */
 
-public String getNombre_usuario() {
-	return nombre_usuario;
+public String getNombreUsuario() {
+	return nombreUsuario;
 }
 
 /**
@@ -76,8 +76,8 @@ public String getNombre_usuario() {
  * @param nombre_usuario
  */
 
-public void setNombre_usuario(String nombre_usuario) {
-	this.nombre_usuario = nombre_usuario;
+public void setNombreUsuario(String nombre_usuario) {
+	this.nombreUsuario = nombre_usuario;
 }
 
 /**
@@ -177,7 +177,7 @@ public void setAdministrador(int administrador) {
 
 @Override
 public String toString() {
-	return "Usuario [idUsuario=" + idUsuario + ", nombre_usuario=" + nombre_usuario + ", email=" + email
+	return "Usuario [idUsuario=" + idUsuario + ", nombre_usuario=" + nombreUsuario + ", email=" + email
 			+ ", contrasena=" + contrasena + ", nombre=" + nombre + ", apellidos=" + apellidos + ", administrador="
 			+ administrador + "]";
 }

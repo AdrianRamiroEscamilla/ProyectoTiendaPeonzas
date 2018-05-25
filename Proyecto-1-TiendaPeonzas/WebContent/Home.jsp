@@ -36,7 +36,7 @@
 		</ul>
 	</div>
 	<div id="container">
-<<<<<<< HEAD
+
 		<div id="content">
 			<h1>
 				Bienvenidos a la tienda online <span
@@ -71,10 +71,10 @@
 			<p></p>
 		</div>
 		
-		<div id="content_right">
-=======
+
+
 	<div id="content_right">
->>>>>>> master
+
 			<dl class="curved">
 				<dt>PRODUCTOS POR CATEGORIAS</dt>
 				<dd>
@@ -83,14 +83,8 @@
 						<form method="post" action="Categorias">
 
 						<li><select name="opcion" class="desplegable" >
-								<option value="-MATERIAL" selected="selected">-MATERIAL</option>
-
-								<option value="Madera"><a></a>Madera</option>
-								<option value="Metal">Metal</option>
-								<option value="Plástico">Plástico</option>
-						</select></li>
-						<li><select name="desplegable2" class="desplegable">
-
+	
+								<option value=-MATERIAL selected="selected">-MATERIAL</option>
 								<option value="madera" >Madera</option>
 								<option value="metal">Metal</option>
 								<option value="plástico">Plástico</option>

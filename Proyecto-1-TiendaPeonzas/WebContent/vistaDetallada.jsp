@@ -38,8 +38,7 @@
 	<div id="container">
 		<div id="content">
 			<h1>
-				Detalles de peonza <span
-					style="font-weight: bold; color: #02c0ff;">${peonza.nombre }</span>
+				Detalles de peonza <spanstyle="font-weight: bold; color: #02c0ff;">${peonza.nombre}</span>
 			</h1>
 				<div id="vistaDetallada">
 									

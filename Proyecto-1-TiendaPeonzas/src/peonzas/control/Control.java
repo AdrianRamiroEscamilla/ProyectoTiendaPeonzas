@@ -100,8 +100,13 @@ public class Control extends HttpServlet {
 		
 
 		String idPeonza = request.getParameter("idPeonza");
+<<<<<<< HEAD
 		Peonza peonza= new DatosPeonzas().searchId(idPeonza);
 		
+=======
+	
+		Peonza peonza = new DatosPeonzas().searchId(idPeonza);
+>>>>>>> master
 		request.setAttribute("peonza", peonza);
 		RequestDispatcher view;
     	view = request.getRequestDispatcher("vistaDetallada.jsp");

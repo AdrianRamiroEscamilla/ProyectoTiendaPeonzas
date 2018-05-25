@@ -19,6 +19,7 @@ public class BackOffice extends HttpServlet {
      */
 	protected void processHandler(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
 		
+		
 	}
     public BackOffice() {
         super();

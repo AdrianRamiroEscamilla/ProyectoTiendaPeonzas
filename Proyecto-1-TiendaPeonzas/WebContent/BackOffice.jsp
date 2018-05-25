@@ -66,9 +66,9 @@
                                 <td>${peonza.cuerda}</td>
                                 <td>${peonza.descripcion}</td>
 
-                                <td><a href="#">Detalles</a></td>
-                                <td><a href="#">Modificar</a></td>
-                                <td><a href="#">Eliminar</a></td>
+                                <td><a href="BackOffice">Detalles</a></td>
+                                <td><a href="BackOffice">Modificar</a></td>
+                                <td><a href="BackOffice">Eliminar</a></td>
                             </tr>
                         </c:forEach>
                     </tbody>

@@ -136,6 +136,38 @@ public class DatosUsuario implements IDatosUsuario{
 		return users;
 	}
 
+	/**
+	 * seeUsuarios
+	 * Método para listar los usuarios
+	 * @return
+	 */
+	public Usuario searchUser (int i){
+		String ruta = "jdbc:mysql://10.90.36.16:3306/proyectopeonzas";
+		String user = "admin";
+		String password = "1111";
+		Usuario usuario = new Usuario();
+		String query = 	"select * from usuarios WHERE idUsuario="+i;
+		try {
+			 ResultSet Rs =Acceso.consultMySql(ruta, user, password, query);
+			 while (Rs.next()){
+				 usuario.setIdUsuario(Rs.getInt(1));
+				 usuario.setNombreUsuario(Rs.getString(2));
+				 usuario.setEmail(Rs.getString(3));
+				 usuario.setContrasena(Rs.getString(4));
+				 usuario.setNombre(Rs.getString(5));
+				 usuario.setApellidos(Rs.getString(6));
+				 usuario.setAdministrador(Rs.getInt(7));
+				 
+				 System.out.println(usuario.getNombre());
+			 }
+		
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return usuario;
+	}
+
 	
 	
 	

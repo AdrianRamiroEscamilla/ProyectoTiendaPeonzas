@@ -96,11 +96,11 @@
                         <c:forEach var="usuario" items="${usuarios}">
                             <tr>
                                 <td>${usuario.nombreUsuario}</td>
-                                <td>${peonza.nombre}</td>
-                                <td>${peonza.apellidos}</td>
-                                <td>${peonza.email}</td>
-                                <td>${peonza.administrador}</td>
-                                <td>${peonza.contrasena}</td>
+                                <td>${usuario.nombre}</td>
+                                <td>${usuario.apellidos}</td>
+                                <td>${usuario.email}</td>
+                                <td>${usuario.administrador}</td>
+                                <td>${usuario.contrasena}</td>
                               
 
                                 <td><a href="#">Detalles</a></td>

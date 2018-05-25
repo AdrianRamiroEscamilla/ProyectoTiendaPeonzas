@@ -25,6 +25,9 @@ public class pruebaAltaModificacionDeletepeonza {
 		
 		
 	}
+	/**
+	 * 
+	 */
 	public static void pruebaAlta(){
 		
 		Peonza peonza = new Peonza( "peonzaprueba", 34, "rutaimagen ",21,"material","descripcion", 23.77,null, null, 21.33);

@@ -14,7 +14,7 @@ import peonzas.domain.Peonza;
 import peonzas.domain.Punta;
 import utilidades.Acceso;
 
-public class DatosPeonzas {
+public class DatosPeonzas implements IDatosPeonzas {
 	ArrayList<Peonza> alPeonzas = new ArrayList<>();
 
 	public ArrayList<Peonza> seePeonza() {
@@ -68,8 +68,7 @@ public class DatosPeonzas {
 	 */
 
 	public ArrayList<Peonza> buscaCategoria(String categoria, String tipo) {
-		ArrayList<Peonza> apeonzas = new ArrayList<>();
-
+		
 		if (categoria.equals("material")) {
 			tipo = "='" + tipo + "'";
 		} else if (categoria.equals("punta")) {
@@ -104,15 +103,15 @@ public class DatosPeonzas {
 				cuerda.setId(rs.getInt(9));
 				peonza.setCuerda(cuerda);
 
-				apeonzas.add(peonza);
+				alPeonzas.add(peonza);
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println(apeonzas.size());
+		System.out.println(alPeonzas.size());
 
-		return apeonzas;
+		return alPeonzas;
 
 	}
 

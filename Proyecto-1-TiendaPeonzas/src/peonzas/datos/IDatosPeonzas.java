@@ -7,4 +7,5 @@ import peonzas.domain.Peonza;
 public interface IDatosPeonzas {
 
 	public ArrayList<Peonza> seePeonza();
+	
 }

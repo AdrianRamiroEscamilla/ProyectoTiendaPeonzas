@@ -3,13 +3,14 @@ package peonzas.servicios;
 import java.util.ArrayList;
 import java.util.List;
 
-import peonzas.datos.Datos;
+
+import peonzas.datos.DatosPeonzas;
 import peonzas.domain.Cuerda;
 import peonzas.domain.Peonza;
 import peonzas.domain.Punta;
-import peonzas.modelo.Coleccion;
 
-public class PeonzasService implements IPeonzasService{
+
+public class PeonzasService {
 
 	/*Aquí igual, los otros arraylist están de más.
 	 * además que yo creo que habría que trabajar con la capa Colección
@@ -19,24 +20,25 @@ public class PeonzasService implements IPeonzasService{
 	List <Peonza> ListaPeonzas= new ArrayList<>();
 	List <Cuerda> ListaCuerdas= new ArrayList<>();
 	List <Punta> ListaPuntas= new ArrayList<>();
-	Datos datos = new Datos();
-	Coleccion coleccion = new Coleccion();
+	
+	
 	
 	/**
-	 * InitProduct carga los datos iniciales de los productos.
+	 * metodo para a�adir peonzas
 	 * @return
 	 */
-	public ArrayList InitProduct(){
-		return  datos.atack();
+	public boolean altaPeonza(Peonza peonza, int punta, int cuerda) {
+		return new DatosPeonzas().altaPeonza(peonza, punta, cuerda);
 	}
-	
 	/**
-	 * metodo para mostrar la lista de peonzas
+	 * metodo para borrar peonzas
 	 * @return
 	 */
-	public void add(Peonza peonza){
-		ListaPeonzas.add(peonza);
+	public boolean deletePeonza(Peonza peonza) {
+		return new DatosPeonzas().deletePeonza(peonza);
 	}
+	/**
+	
 	/**
 	 * método para el tamaño de la coleccion
 	 * @param peonza
@@ -45,65 +47,28 @@ public class PeonzasService implements IPeonzasService{
 	public int size(Peonza peonza){
 		return ListaPeonzas.size();
 	}
-	public void muestraPeonzas(){
+	public ArrayList<Peonza> seePeonzas(){
 		
-		for(Peonza peonza:ListaPeonzas){
-			System.out.println(peonza.toString());
-		}
+		return new DatosPeonzas().seePeonza();
 	}
 	
 	/**
-	 * metodo para mostrar peonzas por material
+	 * metodo para mostrar peonzas por categoria
 	 * @return
 	 */
 	
-	public void muestraPeonzasMaterial(String material){
-		int i=0;
-		for(i=0;i<ListaCuerdas.size();i++){
-			if(ListaPeonzas.get(i).equals(material)){
-				System.out.println(ListaCuerdas.get(i));
-			}
-		}
+	public ArrayList<Peonza> searchCategoria(String categoria,String tipo){
+		return new DatosPeonzas().buscaCategoria(categoria, tipo);
 	}
 	
 	/**
-	 * metodo para mostrar puntas
+	 * Buscar por id peonza
+	 * @param peonza
 	 * @return
 	 */
-	
-	public void muestraPuntas(){
-		for(Punta punta:ListaPuntas){
-			System.out.println(punta.toString());
-		}
+	public Peonza searchId(String idPeonza)
+	{
+		return new DatosPeonzas().searchId(idPeonza);
 	}
-	
-	/**
-	 * metodo para mostrar cuerdas
-	 * @return
-	 */
-	
-	public void muestraCuerdas(){
-		for(Cuerda cuerda:ListaCuerdas){
-			System.out.println(cuerda.toString());
-		}
-		
-	}
-	
-
-	  
-	 /**metodo para mostrar peonzas por tama�o
-	  * 
-	  * @param material
-	  */
-	  public void muestraPeonzasTamanyo(String tamanyo){
-		int i=0;
-		for(i=0;i<ListaCuerdas.size();i++){
-			if(ListaPeonzas.get(i).equals(tamanyo)){
-				System.out.println(ListaCuerdas.get(i));
-			}
-		}
-	}
-
-	
 	 
 }

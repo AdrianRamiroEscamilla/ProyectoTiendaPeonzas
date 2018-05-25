@@ -119,6 +119,36 @@ public class DatosPeonzas {
 	
 	}
 	
+<<<<<<< HEAD
+	public Peonza searchId(String idPeonza){
+		
+		String query = "Select * from peonzas WHERE idPeonza ='"+idPeonza+"'";
+		String ruta = "jdbc:mysql://10.90.36.16/proyectopeonzas";
+		String usuario = "admin";
+		String password = "1111";
+
+		ResultSet rs = Acceso.consultMySql(ruta, usuario, password, query);
+		Peonza peonza = new Peonza();
+		Punta punta = new Punta();
+		Cuerda cuerda = new Cuerda();
+		try {
+			
+			while(rs.next()){
+			peonza.setId(rs.getInt(1));
+			peonza.setNombre(rs.getString(2));
+			peonza.setTamanyo(rs.getInt(3));
+			peonza.setPrecio(rs.getDouble(4));
+			peonza.setImagen(rs.getString(5));
+			peonza.setMaterial(rs.getString(6));
+			peonza.setCantidad(rs.getInt(7));
+			punta.setIdPunta(rs.getInt(8));
+			peonza.setPunta(punta);
+			cuerda.setId(rs.getInt(9));
+			peonza.setCuerda(cuerda);
+			peonza.setDescripcion(rs.getString(10));
+			}
+			
+=======
 	/**
 	 * M�todo para el backoffice para a�adir productos
 	 * @param peonza
@@ -138,11 +168,16 @@ public class DatosPeonzas {
 		
 		try {
 			int modif = Acceso.modifMySql(ruta, usuario, password, query2);
+>>>>>>> master
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+<<<<<<< HEAD
+		return peonza;
+		
+=======
 		System.out.println(apeonzas.size());
 		return false;
 
@@ -173,6 +208,7 @@ public class DatosPeonzas {
 		}
 		return false;
 
+>>>>>>> master
 	}
 	
 }

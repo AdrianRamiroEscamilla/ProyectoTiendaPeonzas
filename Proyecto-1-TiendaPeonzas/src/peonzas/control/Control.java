@@ -33,6 +33,24 @@ public class Control extends HttpServlet {
 	
     protected void processHandler(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException
     {
+    	if (request.getParameter("opcion").equals("Detalles"))  {
+    	    // cadena no está vacía
+    		processDetailPeonza(request,response);   	
+    		
+    	}else{
+    	processHome(request, response);
+    	}
+    	//String opcion= request.getParameter("opcion");
+    	
+    	/*
+    	if (request.getParameter("opcion")!=null){
+    		    		
+    		processDetailPeonza(request,response);
+    	}else if (request.getParameter("opcion")==null){
+    		
+    		processHome(request, response);   	
+		    	
+    		} */
     	ArrayList<Peonza> alPeonzas;
     	ArrayList<Usuario> alUsuarios;
     	RequestDispatcher view;
@@ -52,20 +70,22 @@ public class Control extends HttpServlet {
     			break;
     		case "Backoffice":
     			alPeonzas = new DatosPeonzas().seePeonza();
-    			alUsuarios = new DatosUsuario().seeUsuarios();
+    			//alUsuarios = new DatosUsuario().seeUsuarios();
     	    	request.setAttribute("productos", alPeonzas);
-    	    	request.setAttribute("usuarios", alUsuarios );
+    	    	//request.setAttribute("usuarios", alUsuarios );
     	    	
     	    	view = request.getRequestDispatcher("BackOffice.jsp");
     	    	view.forward(request, response);
     			break;
     		case "Detalles":
-    			
+    			processDetailPeonza(request, response);
     			break;
     	}
     	
     	
+
     }
+    
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -90,6 +110,17 @@ public class Control extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
+	
+	protected void processDetailPeonza(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String idPeonza = request.getParameter("idPeonza");
+		request.setAttribute("idPeonza", idPeonza);
+		
+		RequestDispatcher view;
+    	view = request.getRequestDispatcher("vistaDetallada.jsp");
+    	view.forward(request, response);
+	}
+	
 	
 	
 	

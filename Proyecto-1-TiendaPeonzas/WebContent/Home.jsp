@@ -27,7 +27,8 @@
 	</div>
 	<div id="menu">
 		<ul id="nav">
-			<li id="home" class="activelink"><a href="Control?opcion=Home">HomeHome</a></li>
+
+			<li id="home" class="activelink"><a href="Control?opcion=Home">Home</a></li>
 			<li id="who"><a href="Control?opcion=Backoffice">About</a></li>
 			<li id="prod"><a href="#">Product</a></li>
 			<li id="serv"><a href="#">Services</a></li>
@@ -35,7 +36,45 @@
 		</ul>
 	</div>
 	<div id="container">
+
+		<div id="content">
+			<h1>
+				Bienvenidos a la tienda online <span
+					style="font-weight: bold; color: #02c0ff;">Peonzas Shop</span>
+			</h1>
+			<p class="big">Esta es la pagina de peonzas online mas famosa del 
+			mundo, un poco mas abajo tenemos nuestros productos.</p>
+			
+			
+			<c:forEach var="peonza" items="${productos}" varStatus="loopCount">
+				<c:if test="${loopCount.index mod '3' eq 0}">
+					<div class="clearbox">
+				</c:if>
+				<div id="box">
+					<h2>
+						<img src="images/last.gif" alt="ad">${peonza.nombre}</h2>
+					<div id="imgProducto">
+						<img src="${peonza.imagen}" alt="${peonza.nombre}">
+					</div>
+					<blockquote>${peonza.descripcion}</blockquote>
+					<p id="precio">Precio : ${peonza.precio} $</p>
+					
+					                     
+                    <a href="Control?opcion=Detalles&idPeonza=${peonza.id}">Ver detalles</a>
+                    
+				</div>
+				<c:if test="${loopCount.count mod '3' eq 0}">
+					</div>
+				</c:if>
+				
+			</c:forEach>
+			<p></p>
+		</div>
+		
+
+
 	<div id="content_right">
+
 			<dl class="curved">
 				<dt>PRODUCTOS POR CATEGORIAS</dt>
 				<dd>
@@ -44,7 +83,8 @@
 						<form method="post" action="Categorias">
 
 						<li><select name="opcion" class="desplegable" >
-								<option value="-MATERIAL" selected="selected">-MATERIAL</option>
+	
+								<option value=-MATERIAL selected="selected">-MATERIAL</option>
 								<option value="madera" >Madera</option>
 								<option value="metal">Metal</option>
 								<option value="plástico">Plástico</option>
@@ -53,6 +93,7 @@
 						</select></li></form>
 						<form method="post" action="Categorias">
 						<li><select name="opcion" class="desplegable">
+
 								<option value="-TAMAÑO" selected="selected">-TAMAÑO</option>
 								<option value=">10.0"><a href="Categorias" >Grande</a></option>
 								<option value="> 9.0 and tamanyo <10.0"><a href="Categorias" >Mediana</a></option>
@@ -114,35 +155,9 @@
 				</dd>
 			</dl>
 		</div>
-		<div id="content">
-			<h1>
-				Bienvenidos a la tienda online <span
-					style="font-weight: bold; color: #02c0ff;">Peonzas Shop</span>
-			</h1>
-			<p class="big">Esta es la pagina de peonzas online mas famosa del 
-			mundo, un poco mas abajo tenemos nuestros productos.</p>
-			
-			
-			<c:forEach var="peonza" items="${productos}" varStatus="loopCount">
-				<c:if test="${loopCount.index mod '3' eq 0}">
-					<div class="clearbox">
-				</c:if>
-				<div id="box">
-					<h2>
-						<img src="images/last.gif" alt="ad">${peonza.nombre}</h2>
-					<div id="imgProducto">
-						<img src="${peonza.imagen}" alt="${peonza.nombre}">
-					</div>
-					<blockquote>${peonza.descripcion}</blockquote>
-					<p id="precio">Precio : ${peonza.precio} $</p>
-				</div>
-				<c:if test="${loopCount.count mod '3' eq 0}">
-				
-					</div>
-				</c:if>
-			</c:forEach>
+
 			<p></p>
-		</div>
+	
 		
 		
 	</div>

@@ -103,14 +103,13 @@
                                 <td>${usuario.contrasena}</td>
                               
 
-                                <td><a href="#">Detalles</a></td>
-                                <td><a href="#">Modificar</a></td>
-                                <td><a href="#">Eliminar</a></td>
+                                <td><a href="BackOffice?id=${usuario.idUsuario}&name=detalle">Modificar</a></td>
+                                <td><a href="BackOffice?id=${usuario.idUsuario}&name=eliminar">Eliminar</a></td>
                             </tr>
                         </c:forEach>
                     </tbody>
                 </table>
-                <p><a href="#">Crear nuevo usuario</a></p>
+                <p><a href="CreateUser.jsp">Crear nuevo usuario</a></p>
 
                 <br/>
                 <br/>

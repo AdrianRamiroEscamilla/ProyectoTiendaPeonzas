@@ -46,7 +46,7 @@
 																			 
 					</div>					
 					<div id="right">	
-						<form method="post" action="BackOffice?name=guardar">										
+						<form method="post" action="BackOffice?name=crear">										
 						<p><label>Id de Usuario: </label><input type="text" name="id"value="${usuario.idUsuario}">  </p>
 						<p><label>Nombre: </label><input type="text" name="nombre" value=" ${usuario.nombre}"> </p>
 						<p><label>Apellidos: </label><input type="text" name="apellidos" value="${usuario.apellidos}">  </p>
@@ -57,7 +57,7 @@
 					
 						
 					
-						<input type="submit" name="guardar" value="Guardar"/>
+						<input type="submit" name="crear" value="Crear"/>
 						
 						</form>
 						

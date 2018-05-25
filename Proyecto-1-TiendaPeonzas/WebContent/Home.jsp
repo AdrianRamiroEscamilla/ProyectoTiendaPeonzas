@@ -36,7 +36,7 @@
 		</ul>
 	</div>
 	<div id="container">
-<<<<<<< HEAD
+
 		<div id="content">
 			<h1>
 				Bienvenidos a la tienda online <span
@@ -71,10 +71,10 @@
 			<p></p>
 		</div>
 		
-		<div id="content_right">
-=======
+
+
 	<div id="content_right">
->>>>>>> master
+
 			<dl class="curved">
 				<dt>PRODUCTOS POR CATEGORIAS</dt>
 				<dd>

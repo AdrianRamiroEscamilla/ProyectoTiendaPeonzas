@@ -148,4 +148,36 @@ public class DatosPeonzas {
 
 	}
 	
+	
+	/**
+	 * Método para el backoffice para modificar productos
+	 * @param peonza
+	 * @param punta
+	 * @param cuerda
+	 * @return
+	 */
+	public boolean changePeonza(Peonza peonza, int punta, int cuerda){
+		ArrayList<Peonza> apeonzas = new ArrayList<>();
+		
+
+		int num = -3;
+		boolean booleano = false;
+		String ruta = "jdbc:mysql://10.90.36.16:3306/proyectopeonzas";
+		String user = "admin";
+		String password = "1111";
+
+		String query = 	"', nombre='', tamanyo='', precio='', imagen='', material=', cantidad=', punta='"+punta+"', cuerda="+cuerda+"', descripcion="+peonza.getDescripcion()+"', WHERE idPeonza="+peonza.getId()+")";
+		String query2 = "update PEONZAS SET nombrePeonza='"+peonza.getNombre()+"', tamanyo="+peonza.getTamanyo()+", precio="+peonza.getPrecio()+", imagen='"+peonza.getImagen()+"', material='"+peonza.getMaterial()+"', cantidad="+peonza.getCantidad()+",punta="+punta+", cuerda="+cuerda+", descripcion='"+peonza.getDescripcion()+"' where idPeonza="+peonza.getId()+"";
+		System.out.println(query2);
+		try {
+			 num =Acceso.modifMySql(ruta, user, password, query2);
+			booleano=true;
+		} catch (SQLException e) {
+			booleano = false;
+			e.printStackTrace();
+		}
+		System.out.println(num);
+		return booleano;
+
+	}
 }

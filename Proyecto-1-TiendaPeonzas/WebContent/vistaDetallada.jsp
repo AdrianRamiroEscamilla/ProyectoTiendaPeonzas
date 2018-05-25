@@ -29,7 +29,7 @@
 		<ul id="nav">
 
 			<li id="home" class="activelink"><a href="Control?opcion=Home">Home</a></li>
-			<li id="who"><a href="Control?opcion=Backoffice">About</a></li>
+			<li id="who"><a href="Control?opcion=Backoffice">Backoffice</a></li>
 			<li id="prod"><a href="#">Product</a></li>
 			<li id="serv"><a href="#">Services</a></li>
 			<li id="cont"><a href="#">Contact us</a></li>
@@ -54,8 +54,8 @@
 						<p> ID: ${peonza.id} $</p>
 						<p> Tamaño: ${peonza.tamanyo}</p>
 						<p> Material: ${peonza.material}</p>
-						<p> Punta: ${peonza.punta.nombre}</p>
-						<p> Cuerda: ${peonza.cuerda.nombre}</p>
+						<p> Punta: ${peonza.punta}</p>
+						<p> Cuerda: ${peonza.cuerda}</p>
 						<blockquote>${peonza.descripcion}</blockquote>
 						<p id="precio">Precio : ${peonza.precio} $</p>
 						<input type="submit" value="comprar" />

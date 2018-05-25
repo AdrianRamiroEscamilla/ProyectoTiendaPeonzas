@@ -4,8 +4,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-<title>Peonzas Shop</title>
+<title>Peonzas Details</title>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <link
 	href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Gloria+Hallelujah|Luckiest+Guy"
 	rel="stylesheet">
@@ -27,19 +28,18 @@
 	</div>
 	<div id="menu">
 		<ul id="nav">
-
-			<li id="home" class="activelink"><a href="Control?opcion=Home">Home</a></li>
-			<li id="who"><a href="Control?opcion=Backoffice">Backoffice</a></li>
+			<li id="home" class="activelink"><a href="Control">Home</a></li>
+			<li id="who"><a href="#">About</a></li>
 			<li id="prod"><a href="#">Product</a></li>
 			<li id="serv"><a href="#">Services</a></li>
 			<li id="cont"><a href="#">Contact us</a></li>
 		</ul>
 	</div>
 	<div id="container">
-
 		<div id="content">
 			<h1>
-				Detalles de peonza <spanstyle="font-weight: bold; color: #02c0ff;">${peonza.nombre}</span>
+				Detalles de peonza <span
+					style="font-weight: bold; color: #02c0ff;">${peonza.nombre }</span>
 			</h1>
 				<div id="vistaDetallada">
 									
@@ -54,8 +54,8 @@
 						<p> ID: ${peonza.id} $</p>
 						<p> Tamaño: ${peonza.tamanyo}</p>
 						<p> Material: ${peonza.material}</p>
-						<p> Punta: ${peonza.punta}</p>
-						<p> Cuerda: ${peonza.cuerda}</p>
+						<p> Punta: ${peonza.punta.nombre}</p>
+						<p> Cuerda: ${peonza.cuerda.nombre}</p>
 						<blockquote>${peonza.descripcion}</blockquote>
 						<p id="precio">Precio : ${peonza.precio} $</p>
 						<input type="submit" value="comprar" />
@@ -63,64 +63,45 @@
 					</div>
             	</div>
        </div>
+	</div>				
+		</div>
 		
-
-
-	<div id="content_right">
-
+		<div id="content_right">
 			<dl class="curved">
 				<dt>PRODUCTOS POR CATEGORIAS</dt>
 				<dd>
 					<br />
 					<ul id="navlist">
-						<form method="post" action="Categorias">
-
-						<li><select name="opcion" class="desplegable" >
-	
-								<option value=-MATERIAL selected="selected">-MATERIAL</option>
-								<option value="madera" >Madera</option>
-								<option value="metal">Metal</option>
-								<option value="plástico">Plástico</option>
-								<input type="hidden" name="categoria" value="material" />
-								<input type="submit" class="button" value="Enviar">
-						</select></li></form>
-						<form method="post" action="Categorias">
-						<li><select name="opcion" class="desplegable">
-
+						<li><select name="desplegable" class="desplegable">
+								<option value="-MATERIAL" selected="selected">-MATERIAL</option>
+								<option value="Madera"><a></a>Madera</option>
+								<option value="Metal">Metal</option>
+								<option value="Plástico">Plástico</option>
+						</select></li>
+						<li><select name="desplegable2" class="desplegable">
 								<option value="-TAMAÑO" selected="selected">-TAMAÑO</option>
-								<option value=">10.0"><a href="Categorias" >Grande</a></option>
-								<option value="> 9.0 and tamanyo <10.0"><a href="Categorias" >Mediana</a></option>
-								<option value="<9"><a href="Categorias" >Pequeña</a></option>
-								<input type="hidden" name="categoria" value="tamanyo" />
-								<input type="submit" class="button" value="Enviar">
-						</select></li></form>
-						<form method="post" action="Categorias">
-						<li><select name="opcion" class="desplegable">
+								<option value="Grande">Grande</option>
+								<option value="Mediana">Mediana</option>
+								<option value="Pequeña">Pequeña</option>
+						</select></li>
+						<li><select name="desplegable3" class="desplegable">
 								<option value="-PRECIO" selected="selected">-PRECIO</option>
-								<option value="> 10 and precio < 15">10-15 €</option>
-								<option value="> 15 and  <20">15-20 €</option>
-								<option value=">20">>20 €</option>
-								<input type="hidden" name="categoria" value="precio" />
-								<input type="submit" class="button" value="Enviar">
-						</select></li></form>
-						<form method="post" action="Categorias">
-						<li><select name="opcion" class="desplegable">
+								<option value="5-10 €">5-10 €</option>
+								<option value="10-15 €">10-15 €</option>
+								<option value="15-20 €">15-20 €</option>
+						</select></li>
+						<li><select name="desplegable4" class="desplegable">
 								<option value="-PUNTA" selected="selected">-PUNTA</option>
-								<option value="1">Afilada</option>
-								<option value="2">Redonda</option>
-								<option value="3">Plana</option>
-								<input type="hidden" name="categoria" value="punta" />
-								<input type="submit" class="button" value="Enviar">
-						</select></li></form>
-						<form method="post" action="Categorias">
-						<li><select name="opcion" class="desplegable">
+								<option value="Afilada">Afilada</option>
+								<option value="Redonda">Redonda</option>
+								<option value="Plana">Plana</option>
+						</select></li>
+						<li><select name="desplegable5" class="desplegable">
 								<option value="-CUERDA" selected="selected">-CUERDA</option>
-								<option value="1">Rígida</option>
-								<option value="2">Trenzada</option>
-								<option value="3">Elástica</option>
-								<input type="hidden" name="categoria" value="cuerda" />
-								<input type="submit"  class="button" value="Enviar">
-						</select></li></form>
+								<option value="Rígida">Rígida</option>
+								<option value="Trenzada">Trenzada</option>
+								<option value="Elástica">Elástica</option>
+						</select></li>
 
 					</ul>
 					<p class="last">&nbsp;</p>
@@ -148,11 +129,6 @@
 				</dd>
 			</dl>
 		</div>
-
-			<p></p>
-	
-		
-		
 	</div>
 	<div id="footer">
 		<p>

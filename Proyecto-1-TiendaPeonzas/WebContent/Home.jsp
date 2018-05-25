@@ -29,7 +29,7 @@
 		<ul id="nav">
 
 			<li id="home" class="activelink"><a href="Control?opcion=Home">Home</a></li>
-			<li id="who"><a href="Control?opcion=Backoffice">About</a></li>
+			<li id="who"><a href="Control?opcion=Backoffice">Backoffice</a></li>
 			<li id="prod"><a href="#">Product</a></li>
 			<li id="serv"><a href="#">Services</a></li>
 			<li id="cont"><a href="#">Contact us</a></li>

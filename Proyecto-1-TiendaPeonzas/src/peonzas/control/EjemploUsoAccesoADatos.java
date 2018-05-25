@@ -6,7 +6,7 @@ import javax.sql.*;
 import java.util.*;
 
 import peonzas.domain.Peonza;
-import peonzas.modelo.Coleccion;
+
 import peonzas.servicios.PeonzasService;
 import utilidades.Acceso;
 

@@ -146,6 +146,7 @@ public class DatosPeonzas {
 			cuerda.setId(rs.getInt(9));
 			peonza.setCuerda(cuerda);
 			peonza.setDescripcion(rs.getString(10));
+			System.out.println(peonza.toString());
 			}
 		}catch(SQLException e)
 		{

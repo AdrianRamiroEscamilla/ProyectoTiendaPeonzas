@@ -180,4 +180,31 @@ public class DatosPeonzas {
 		return booleano;
 
 	}
+	
+	public ArrayList<Peonza> seeExistencias(){
+		String ruta = "jdbc:mysql://10.90.36.16:3306/proyectopeonzas";
+		String user = "admin";
+		String password = "1111";
+		String query="SELECT nombrePeonza, cantidad FROM peonzas";
+		
+		ResultSet rs = Acceso.consultMySql(ruta, user, password, query);
+		Peonza peonza;
+		peonza = new Peonza();
+		try {
+			while (rs.next()) {
+				
+				peonza.setNombre(rs.getString(1));
+				peonza.setCantidad(rs.getInt(2));
+
+				alPeonzas.add(peonza);
+				System.out.println("Nombre de peonza: "+ peonza.getNombre() + ", Cantidad existente: " + peonza.getCantidad() + " existencias");
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return alPeonzas;
+	}
 }
+

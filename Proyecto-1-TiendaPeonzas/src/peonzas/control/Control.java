@@ -53,9 +53,9 @@ public class Control extends HttpServlet {
     			break;
     		case "Backoffice":
     			alPeonzas = new DatosPeonzas().seePeonza();
-    			//alUsuarios = new DatosUsuario().seeUsuarios();
+    			alUsuarios = new DatosUsuario().seeUsuarios();
     	    	request.setAttribute("productos", alPeonzas);
-    	    	//request.setAttribute("usuarios", alUsuarios );
+    	    	request.setAttribute("usuarios", alUsuarios );
     	    	
     	    	view = request.getRequestDispatcher("BackOffice.jsp");
     	    	view.forward(request, response);
@@ -96,10 +96,15 @@ public class Control extends HttpServlet {
 	
 	protected void processDetailPeonza(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+<<<<<<< HEAD
 		
 
 		String idPeonza = request.getParameter("idPeonza");
 		Peonza peonza= new DatosPeonzas().searchId(idPeonza);
+=======
+		String idPeonza = request.getParameter("idPeonza");
+		Peonza peonza = new DatosPeonzas().searchId("idPeonza");
+>>>>>>> master
 		request.setAttribute("peonza", peonza);
 		RequestDispatcher view;
     	view = request.getRequestDispatcher("vistaDetallada.jsp");

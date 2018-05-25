@@ -8,7 +8,7 @@ import peonzas.domain.Usuario;
 
 import utilidades.Acceso;
 
-public class DatosUsuario {
+public class DatosUsuario implements IDatosUsuario{
 	
 	/**
 	 * userInput

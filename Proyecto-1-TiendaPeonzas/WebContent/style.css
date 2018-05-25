@@ -15,7 +15,53 @@ body {
     height: 150px;
     background: #68000a url(images/banner.png) center no-repeat;
 }
-
+.button {
+   border: 2px solid #000000;
+   background: #b83321;
+   background: -webkit-gradient(linear, left top, left bottom, from(#fa961b), to(#b83321));
+   background: -webkit-linear-gradient(top, #fa961b, #b83321);
+   background: -moz-linear-gradient(top, #fa961b, #b83321);
+   background: -ms-linear-gradient(top, #fa961b, #b83321);
+   background: -o-linear-gradient(top, #fa961b, #b83321);
+   background-image: -ms-linear-gradient(top, #fa961b 0%, #b83321 100%);
+   padding: 10.5px 21px;
+   -webkit-border-radius: 30px;
+   -moz-border-radius: 30px;
+   border-radius: 30px;
+   -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   text-shadow: #090d0f 0 1px 0;
+   color: #010008;
+   font-size: 15px;
+   font-family: helvetica, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button:hover {
+   border: 2px solid #ffffff;
+   text-shadow: #1ac748 0 1px 0;
+   background: #0be013;
+   background: -webkit-gradient(linear, left top, left bottom, from(#65d665), to(#0be013));
+   background: -webkit-linear-gradient(top, #65d665, #0be013);
+   background: -moz-linear-gradient(top, #65d665, #0be013);
+   background: -ms-linear-gradient(top, #65d665, #0be013);
+   background: -o-linear-gradient(top, #65d665, #0be013);
+   background-image: -ms-linear-gradient(top, #65d665 0%, #0be013 100%);
+   color: #fff;
+   }
+.button:active {
+   text-shadow: #030b0f 0 1px 0;
+   border: 2px solid #000000;
+   background: #b83321;
+   background: -webkit-gradient(linear, left top, left bottom, from(#fa961b), to(#0be013));
+   background: -webkit-linear-gradient(top, #fa961b, #b83321);
+   background: -moz-linear-gradient(top, #fa961b, #b83321);
+   background: -ms-linear-gradient(top, #fa961b, #b83321);
+   background: -o-linear-gradient(top, #fa961b, #b83321);
+   background-image: -ms-linear-gradient(top, #fa961b 0%, #b83321 100%);
+   color: #050205;
+   }
 #banner h1 {
     margin: 0 0 0 250px;
     line-height: 1.8em;
@@ -299,11 +345,11 @@ a img {
 	border: none;
 }
 
-a:link, a:visited {
+/*a:link, a:visited {
 	color: #286e87;
 	background: inherit;
 	text-decoration: none;
-}
+}*/
 
 a:hover {
 	text-decoration: none;

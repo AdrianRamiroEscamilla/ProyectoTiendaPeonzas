@@ -120,7 +120,7 @@ public class DatosPeonzas {
 	}
 	
 	/**
-	 * Método para el backoffice para añadir productos
+	 * Mï¿½todo para el backoffice para aï¿½adir productos
 	 * @param peonza
 	 * @param punta
 	 * @param cuerda
@@ -148,36 +148,31 @@ public class DatosPeonzas {
 
 	}
 	
-	
 	/**
-	 * Método para el backoffice para modificar productos
+	 * Mï¿½todo para el backoffice para eliminar productos
 	 * @param peonza
 	 * @param punta
 	 * @param cuerda
 	 * @return
 	 */
-	public boolean changePeonza(Peonza peonza, int punta, int cuerda){
-		ArrayList<Peonza> apeonzas = new ArrayList<>();
+	public boolean deletePeonza(Peonza peonza){
 		
-
-		int num = -3;
 		boolean booleano = false;
-		String ruta = "jdbc:mysql://10.90.36.16:3306/proyectopeonzas";
-		String user = "admin";
-		String password = "1111";
+		String query2 = "delete from peonzas where idPeonza='"+peonza.getId()+"'";
 
-		String query = 	"', nombre='', tamanyo='', precio='', imagen='', material=', cantidad=', punta='"+punta+"', cuerda="+cuerda+"', descripcion="+peonza.getDescripcion()+"', WHERE idPeonza="+peonza.getId()+")";
-		String query2 = "update PEONZAS SET nombrePeonza='"+peonza.getNombre()+"', tamanyo="+peonza.getTamanyo()+", precio="+peonza.getPrecio()+", imagen='"+peonza.getImagen()+"', material='"+peonza.getMaterial()+"', cantidad="+peonza.getCantidad()+",punta="+punta+", cuerda="+cuerda+", descripcion='"+peonza.getDescripcion()+"' where idPeonza="+peonza.getId()+"";
-		System.out.println(query2);
+		String ruta = "jdbc:mysql://10.90.36.16/proyectopeonzas";     
+		String usuario = "admin";
+		String password = "1111";
+		
 		try {
-			 num =Acceso.modifMySql(ruta, user, password, query2);
-			booleano=true;
+			int modif = Acceso.modifMySql(ruta, usuario, password, query2);
+			
 		} catch (SQLException e) {
-			booleano = false;
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println(num);
-		return booleano;
+		return false;
 
 	}
+	
 }

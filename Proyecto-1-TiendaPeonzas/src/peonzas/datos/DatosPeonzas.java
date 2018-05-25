@@ -119,7 +119,7 @@ public class DatosPeonzas {
 	
 	}
 	
-
+<<<<<<< HEAD
 	public Peonza searchId(String idPeonza){
 		
 		String query = "Select * from peonzas WHERE idPeonza ='"+idPeonza+"'";
@@ -147,12 +147,8 @@ public class DatosPeonzas {
 			peonza.setCuerda(cuerda);
 			peonza.setDescripcion(rs.getString(10));
 			}
-		}catch(SQLException e)
-		{
-			e.printStackTrace();
-		}
-		return peonza;
-	}
+		
+			
 
 	/**
 	 * M�todo para el backoffice para a�adir productos
@@ -164,7 +160,7 @@ public class DatosPeonzas {
 	public boolean altaPeonza(Peonza peonza, int punta, int cuerda){
 		ArrayList<Peonza> apeonzas = new ArrayList<>();
 		
-		boolean realizado = false;
+
 		String query2 = "INSERT INTO peonzas ( nombrePeonza, tamanyo, precio, imagen, material, cantidad, punta, cuerda, descripcion) values('"+peonza.getNombre()+"', '"+peonza.getTamanyo()+"', '"+peonza.getPrecio()+"', '"+peonza.getMaterial()+"','"+peonza.getImagen()+"', '"+peonza.getCantidad()+"', '"+punta+"', '"+cuerda+"', '"+peonza.getDescripcion()+"')";
 
 		String ruta = "jdbc:mysql://10.90.36.16/proyectopeonzas";     
@@ -173,25 +169,18 @@ public class DatosPeonzas {
 		
 		try {
 			int modif = Acceso.modifMySql(ruta, usuario, password, query2);
-			if(modif == 1)
-			{
-				realizado = true;
-			}else if(modif == -3)
-			{
-				realizado = false;
-			}
-
+>>>>>>> master
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+<<<<<<< HEAD
+		return peonza;
+		
+=======
 		System.out.println(apeonzas.size());
-		return realizado;
-		
-
-	
-		
+		return false;
 
 	}
 	
@@ -204,7 +193,7 @@ public class DatosPeonzas {
 	 */
 	public boolean deletePeonza(Peonza peonza){
 		
-		boolean realizado = false;
+		boolean booleano = false;
 		String query2 = "delete from peonzas where idPeonza='"+peonza.getId()+"'";
 
 		String ruta = "jdbc:mysql://10.90.36.16/proyectopeonzas";     
@@ -213,20 +202,14 @@ public class DatosPeonzas {
 		
 		try {
 			int modif = Acceso.modifMySql(ruta, usuario, password, query2);
-			if(modif == 1)
-			{
-				realizado = true;
-			}else if(modif == -3)
-			{
-				realizado = false;
-			}
+			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return realizado;
+		return false;
 
-
+>>>>>>> master
 	}
 	
 }

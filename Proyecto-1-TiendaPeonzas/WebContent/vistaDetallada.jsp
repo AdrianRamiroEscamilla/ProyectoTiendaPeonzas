@@ -6,6 +6,7 @@
 <head>
 <title>Peonzas Details</title>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <link
 	href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Gloria+Hallelujah|Luckiest+Guy"
 	rel="stylesheet">
@@ -38,28 +39,33 @@
 		<div id="content">
 			<h1>
 				Detalles de peonza <span
-					style="font-weight: bold; color: #02c0ff;">${Peonza.nombre }</span>
+					style="font-weight: bold; color: #02c0ff;">${peonza.nombre }</span>
 			</h1>
-			<p class="big">Introdúcete en el mundo de las peonzas y rueda por un universo de diversión.</p>
-
-				<div id="box">
-					<h2>
-						fghjnh${peonza.nombre}</h2>
-					<div id="imgProducto">
-						<img src="${peonza.imagen}" alt="${peonza.nombre}">
-					</div>
-					<blockquote>${peonza.descripcion}</blockquote>
-					<p id="precio">Precio : ${peonza.precio} $</p>
+				<div id="vistaDetallada">
+									
+					<h1 id="nomP">${peonza.nombre}</h1>
 					
-					<input type="submit" value="comprar" />                     
-                    <input type="hidden" name="compra" value="${peonza.idPeonza}">
-				</div>
-			
-		<div class="clearbox">
-				
-			<p></p>
+					<div id="left">
+						<div id="imgProducto">
+							<img src="${peonza.imagen}" alt="${peonza.nombre}">
+						</div>																	 
+					</div>					
+					<div id="right">											
+						<p> ID: ${peonza.id} $</p>
+						<p> Tamaño: ${peonza.tamanyo}</p>
+						<p> Material: ${peonza.material}</p>
+						<p> Punta: ${peonza.punta.nombre}</p>
+						<p> Cuerda: ${peonza.cuerda.nombre}</p>
+						<blockquote>${peonza.descripcion}</blockquote>
+						<p id="precio">Precio : ${peonza.precio} $</p>
+						<input type="submit" value="comprar" />
+						<input type="hidden" name="compra" value="${peonza.id}">			
+					</div>
+            	</div>
+       </div>
+	</div>				
 		</div>
-		</div>
+		
 		<div id="content_right">
 			<dl class="curved">
 				<dt>PRODUCTOS POR CATEGORIAS</dt>

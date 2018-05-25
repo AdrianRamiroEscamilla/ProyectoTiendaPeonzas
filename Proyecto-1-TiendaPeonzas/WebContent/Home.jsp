@@ -57,15 +57,15 @@
 					</div>
 					<blockquote>${peonza.descripcion}</blockquote>
 					<p id="precio">Precio : ${peonza.precio} $</p>
-					<input type="submit" value="Ver detalles" />                     
+					
+					                     
+                    <a href="Control?opcion=Detalles&idPeonza=${peonza.id}">Ver detalles</a>
                     
-                     <input type="hidden" name="opcion" value="Detalles">
-                     <input type="hidden" name="idPeonza" value="01"}>
 				</div>
 				<c:if test="${loopCount.count mod '3' eq 0}">
-				
 					</div>
 				</c:if>
+				
 			</c:forEach>
 			<p></p>
 		</div>

@@ -97,7 +97,8 @@ public class Control extends HttpServlet {
 	protected void processDetailPeonza(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String idPeonza = request.getParameter("idPeonza");
-		Peonza peonza = new DatosPeonzas().searchId("idPeonza");
+	
+		Peonza peonza = new DatosPeonzas().searchId(idPeonza);
 		request.setAttribute("peonza", peonza);
 		RequestDispatcher view;
     	view = request.getRequestDispatcher("vistaDetallada.jsp");

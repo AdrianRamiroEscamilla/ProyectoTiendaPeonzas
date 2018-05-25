@@ -124,27 +124,28 @@ public class DatosPeonzas {
 		String password = "1111";
 
 		ResultSet rs = Acceso.consultMySql(ruta, usuario, password, query);
-		System.out.println(rs);
+		
 		Peonza peonza = new Peonza();
 		Punta punta = new Punta();
 		Cuerda cuerda = new Cuerda();
 		try {
-			peonza.setId(rs.getInt(1));
-			peonza.setNombre(rs.getString(2));
-			peonza.setTamanyo(rs.getInt(3));
-			peonza.setPrecio(rs.getDouble(4));
-			peonza.setImagen(rs.getString(5));
-			peonza.setMaterial(rs.getString(6));
-			peonza.setCantidad(rs.getInt(7));
-			punta.setIdPunta(rs.getInt(8));
-			peonza.setPunta(punta);
-			cuerda.setId(rs.getInt(9));
-			peonza.setCuerda(cuerda);
-			peonza.setDescripcion(rs.getString(10));
-			System.out.println(peonza.toString());
+
 			while (rs.next()) 
 			{
-				
+				peonza.setId(rs.getInt(1));
+				peonza.setNombre(rs.getString(2));
+				peonza.setTamanyo(rs.getDouble(3));
+				peonza.setPrecio(rs.getDouble(4));
+				peonza.setImagen(rs.getString(5));
+				peonza.setMaterial(rs.getString(6));
+				peonza.setCantidad(rs.getInt(7));
+				punta.setIdPunta(rs.getInt(8));
+				peonza.setPunta(punta);
+				cuerda.setId(rs.getInt(9));
+				peonza.setCuerda(cuerda);
+				peonza.setDescripcion(rs.getString(10));
+				System.out.println(peonza.toString());
+				System.out.println("Hola");
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

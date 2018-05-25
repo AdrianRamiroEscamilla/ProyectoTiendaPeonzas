@@ -18,7 +18,7 @@
 <body>
 	<div id="banner">
 		<p>
-			<a href="#"><img src="images/home.gif" alt="homepage"></a> | <a
+			<a href="Control?opcion=Home"><img src="images/home.gif" alt="homepage"></a> | <a
 				href="mailto:denise@mitchinson.net"><img src="images/mail.gif"
 				alt="contact"></a>
 		</p>
@@ -58,9 +58,10 @@
 						<p> Cuerda: ${peonza.cuerda}</p>
 						<blockquote>${peonza.descripcion}</blockquote>
 						<p id="precio">Precio : ${peonza.precio} $</p>
-						<input type="submit" value="comprar" />
-						<input type="hidden" name="compra" value="${peonza.id}">			
+						<a href='#' class='button'>Comprar</a>
+									
 					</div>
+					
             	</div>
        </div>
 		

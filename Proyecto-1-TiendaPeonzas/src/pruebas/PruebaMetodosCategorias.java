@@ -6,7 +6,7 @@ import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
 
 import peonzas.datos.DatosPeonzas;
 import peonzas.domain.Peonza;
-import peonzas.modelo.Coleccion;
+
 import peonzas.servicios.PeonzasService;
 
 public class PruebaMetodosCategorias {

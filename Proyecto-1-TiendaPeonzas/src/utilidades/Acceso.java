@@ -46,7 +46,7 @@ public static ResultSet consultMySql(String driverUrl, String user, String passw
 	ResultSet rs = null;
 	try{
 	st = aMysql( driverUrl,  user,  password);
-	System.out.println("Tenemos el st con exito");
+	
 	rs = st.executeQuery(query);
 	
 	}catch (SQLException e){
@@ -63,7 +63,7 @@ public static int modifMySql(String driverUrl, String user, String password, Str
 	int num = -3;
 	try{
 	st = aMysql( driverUrl,  user,  password);
-	System.out.println("Tenemos el stttt con exito");
+	
 
 	num = st.executeUpdate(query);
 	}catch (SQLException e){

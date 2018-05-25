@@ -47,7 +47,7 @@ public class DatosPeonzas implements IDatosPeonzas {
 				peonza.setDescripcion(rs.getString(10));
 
 				alPeonzas.add(peonza);
-				System.out.println(peonza.toString());
+				
 
 			}
 		} catch (SQLException e) {
@@ -143,8 +143,7 @@ public class DatosPeonzas implements IDatosPeonzas {
 				cuerda.setId(rs.getInt(9));
 				peonza.setCuerda(cuerda);
 				peonza.setDescripcion(rs.getString(10));
-				System.out.println(peonza.toString());
-				System.out.println("Hola");
+		
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

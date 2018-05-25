@@ -38,8 +38,7 @@ public class Categorias extends HttpServlet {
     	String categoria = request.getParameter("categoria");
     	String parametro = request.getParameter("opcion");
     	
-    	System.out.println("-----------------"+categoria);
-    	System.out.println("-----------------"+parametro);
+
     	request.setAttribute("parametro", parametro);
     	
     	ArrayList<Peonza> catPeonzas = new DatosPeonzas().buscaCategoria(categoria, parametro);

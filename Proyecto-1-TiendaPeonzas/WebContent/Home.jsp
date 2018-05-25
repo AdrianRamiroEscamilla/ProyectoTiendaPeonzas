@@ -18,7 +18,7 @@
 <body>
 	<div id="banner">
 		<p>
-			<a href="#"><img src="images/home.gif" alt="homepage"></a> | <a
+			<a href="Control?opcion=Home"><img src="images/home.gif" alt="homepage"></a> | <a
 				href="mailto:denise@mitchinson.net"><img src="images/mail.gif"
 				alt="contact"></a>
 		</p>
@@ -60,7 +60,7 @@
 					<p id="precio">Precio : ${peonza.precio} $</p>
 					
 					                     
-                    <a href="Control?opcion=Detalles&idPeonza=${peonza.id}">Ver detalles</a>
+                    <a href="Control?opcion=Detalles&idPeonza=${peonza.id}" class='button'>Detalles</a>
                     
 				</div>
 				<c:if test="${loopCount.count mod '3' eq 0}">

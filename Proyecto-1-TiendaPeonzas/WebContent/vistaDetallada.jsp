@@ -28,8 +28,8 @@
 	</div>
 	<div id="menu">
 		<ul id="nav">
-			<li id="home" class="activelink"><a href="Control">Home</a></li>
-			<li id="who"><a href="#">About</a></li>
+			<li id="home" class="activelink"><a href="Control?opcion=Home">Home</a></li>
+			<li id="who"><a href="Control?opcion=Backoffice">BackOffice</a></li>
 			<li id="prod"><a href="#">Product</a></li>
 			<li id="serv"><a href="#">Services</a></li>
 			<li id="cont"><a href="#">Contact us</a></li>
@@ -58,7 +58,7 @@
 						<p> Cuerda: ${peonza.cuerda.nombre}</p>
 						<blockquote>${peonza.descripcion}</blockquote>
 						<p id="precio">Precio : ${peonza.precio} $</p>
-						<input type="submit" value="comprar" />
+						<a href="#" class='button'>Comprar</a>
 						<input type="hidden" name="compra" value="${peonza.id}">			
 					</div>
             	</div>
@@ -77,30 +77,40 @@
 								<option value="Madera"><a></a>Madera</option>
 								<option value="Metal">Metal</option>
 								<option value="Plástico">Plástico</option>
+								<input type="hidden" name="categoria" value="material" />
+								<input type="submit" class="button" value="Enviar">
 						</select></li>
 						<li><select name="desplegable2" class="desplegable">
 								<option value="-TAMAÑO" selected="selected">-TAMAÑO</option>
 								<option value="Grande">Grande</option>
 								<option value="Mediana">Mediana</option>
 								<option value="Pequeña">Pequeña</option>
+								<input type="hidden" name="categoria" value="tamanyo" />
+								<input type="submit" class="button" value="Enviar">
 						</select></li>
 						<li><select name="desplegable3" class="desplegable">
 								<option value="-PRECIO" selected="selected">-PRECIO</option>
 								<option value="5-10 €">5-10 €</option>
 								<option value="10-15 €">10-15 €</option>
 								<option value="15-20 €">15-20 €</option>
+								<input type="hidden" name="categoria" value="precio" />
+								<input type="submit" class="button" value="Enviar">
 						</select></li>
 						<li><select name="desplegable4" class="desplegable">
 								<option value="-PUNTA" selected="selected">-PUNTA</option>
 								<option value="Afilada">Afilada</option>
 								<option value="Redonda">Redonda</option>
 								<option value="Plana">Plana</option>
+								<input type="hidden" name="categoria" value="punta" />
+								<input type="submit" class="button" value="Enviar">
 						</select></li>
 						<li><select name="desplegable5" class="desplegable">
 								<option value="-CUERDA" selected="selected">-CUERDA</option>
 								<option value="Rígida">Rígida</option>
 								<option value="Trenzada">Trenzada</option>
 								<option value="Elástica">Elástica</option>
+								<input type="hidden" name="categoria" value="cuerda" />
+								<input type="submit"  class="button" value="Enviar">
 						</select></li>
 
 					</ul>

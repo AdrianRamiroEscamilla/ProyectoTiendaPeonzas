@@ -14,7 +14,6 @@ import javax.servlet.http.HttpServletResponse;
 import peonzas.datos.DatosPeonzas;
 import peonzas.datos.DatosUsuario;
 import peonzas.domain.*;
-import peonzas.modelo.Coleccion;
 import peonzas.servicios.PeonzasService;
 
 import peonzas.domain.Peonza;

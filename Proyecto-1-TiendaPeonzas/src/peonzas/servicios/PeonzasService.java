@@ -3,11 +3,10 @@ package peonzas.servicios;
 import java.util.ArrayList;
 import java.util.List;
 
-import peonzas.datos.Datos;
 import peonzas.domain.Cuerda;
 import peonzas.domain.Peonza;
 import peonzas.domain.Punta;
-import peonzas.modelo.Coleccion;
+
 
 public class PeonzasService implements IPeonzasService{
 
@@ -19,17 +18,13 @@ public class PeonzasService implements IPeonzasService{
 	List <Peonza> ListaPeonzas= new ArrayList<>();
 	List <Cuerda> ListaCuerdas= new ArrayList<>();
 	List <Punta> ListaPuntas= new ArrayList<>();
-	Datos datos = new Datos();
-	Coleccion coleccion = new Coleccion();
+
 	
 	/**
 	 * InitProduct carga los datos iniciales de los productos.
 	 * @return
 	 */
-	public ArrayList InitProduct(){
-		return  datos.atack();
-	}
-	
+
 	/**
 	 * metodo para mostrar la lista de peonzas
 	 * @return
@@ -102,6 +97,11 @@ public class PeonzasService implements IPeonzasService{
 				System.out.println(ListaCuerdas.get(i));
 			}
 		}
+	}
+	@Override
+	public ArrayList InitProduct() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	
